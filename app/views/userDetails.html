@@ -1,0 +1,93 @@
+<div side-bar></div>
+<div log-out></div>
+<div id="btn_add">
+    <a class="btn btn-info" ng-click="ShowAdd()" >Add</a>
+</div>
+<div ng-hide="showAddForm">
+    <div class="form_inner">
+      <form  name="form" novalidate style="text-align:center">
+        <div class="form-group">
+            <br><h3>Add User</h3>
+            <p class="add_error" style="color:red"></p>
+            <div class="form_add">
+              <label for="firstname">First Name</label><input type="text" id="firstname" ng-model="firstname"><br>
+              <label for="lastname">Last Name</label><input type="text" id="lastname" ng-model="lastname"><br>
+              <label for="add_email">Email</label><input name="add_email" type="text" id="add_email" ng-model="add_email" required>
+            </div>
+            <div style="padding-top:10px" class="button_div">
+              <button id="submit" ng-click="addRow()">Submit</button>
+              <button id="cancel" ng-click="HideAdd()">Cancel</button>
+            </div>
+        </div>
+      </form>
+    </div>
+</div>
+<div ng-hide="showEditForm">
+    <div class="edit_inner">
+        <form  name="edit_form" novalidate style="text-align:center">
+            <div class="form-group">
+                <div class="edit_form_container">
+                    <h3>Edit User</h3>
+                    <p class="error_msg" style="color:red"></p>
+                    <div class="form_edit">
+                      <label for="first_name">First Name</label><input type="text" id="first_name" ng-model="first_name">
+                      <label for="last_name">Last Name</label><input type="text" id="last_name" ng-model="last_name">
+                      <label for="email_text">Email</label><input type="text" id="email_text" name="email_text" ng-model="email_text" required>
+                      <label for="status">Status:</label>
+                      <select id="status" ng-model="status_select" ng-options="status for status in ['Active', 'Inactive']" ng-init="status_select='Active'"></select>                  
+                    </div>
+                    <div style="padding-top:10px" class="button_edit">
+                        <button id="edit_submit" ng-click="editRow()">Submit</button>
+                        <button id="edit_cancel" ng-click="HideEdit()">Cancel</button>
+                      </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div id="table_contents">
+    <table style="width:100%" id="user_details" class="scroll">
+        <thead>
+            <tr>
+                <th style="width:8%">
+                </th>
+                <th style="width:20%">
+                   First Name
+                </th>
+                <th style="width:20%">
+                   Last Name
+                </th>
+                <th style="width:20%">
+                   Email
+                </th>
+                <th style="width:15%">
+                   Status
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat =  "emp in data" id="rowIcon">
+                <td ng-click="ShowEdit(this)">
+                </td>
+                <td>
+                    {{ emp.firstname }}
+                </td>
+                <td>
+                    {{ emp.lastname }}
+                </td>
+                <td>
+                    {{ emp.email }}
+                </td>
+                <td>
+                    <a ng-click="show = !show" ng-show="!no_edit">{{ statusList }}</a>
+                    <span class="status-list"  ng-show="show">
+                      <select ng-model="statusList" ng-options="status for status in ['Active', 'Inactive']" ng-init="statusList='Active'"></select>
+                      <a class="btn btn-default" ng-click="show = !show">X</a>
+                    </span>
+                </td>
+                 
+            </tr>
+        <tbody>
+    </table>
+</div>

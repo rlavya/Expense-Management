@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <script src="assets/js/angular.min.js"></script>
+        <script src="assets/js/angular-route.js"></script>
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="app.js"></script>
+        <script src="assets/js/routerDetails.js"></script>
+        <script src="app/controllers/loginController.js"></script>
+        <script src="app/controllers/expenseController.js"></<script type="text/javascript">
+        </script>
+    </head>
+    <body style="background-color:#fff">
+        <div ng-app="myApp">
+            <div class="shadow-div"></div>
+
+            <!-- header -->
+            <div id="heading_wrapper">
+                <header id="header">
+                    <div >
+                        <img src="assets/images/qburst.png" alt="" width="100" height="50" style="float:left"/>
+                        <p>Expense Management</p>
+                    </div>
+                </header>
+            </div>
+
+            <!-- views are loaded here -->
+            <div ng-view></div>
+
+            <!-- footer -->
+            <div id="footer-wrapper">
+        		<footer id="footer"><p>C22, Thejaswini, Technopark, Trivandrum - 695581 +91-471-653-7510</p></footer>
+        	</div>
+        </div>
+    </body>
+</html>
