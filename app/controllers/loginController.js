@@ -12,7 +12,10 @@ myApp.controller('loginController', function($scope, $location){
                 return false;
             } else {
                 if ($scope.email == "lavya@qburst.com" && $scope.password == "lavya") {
-                        $location.path('/expense').replace();
+                    $location.path('/expense').replace();
+                }
+                else if ($scope.email == "test@qburst.com" && $scope.password == "test") {
+                    $location.path('/testexpense').replace();
                 }
                 else {
                     $('#show_error').html('Enter correct details..');

@@ -1,4 +1,4 @@
-myApp.config(function($routeProvider) {
+myApp.config(function($routeProvider,$locationProvider) {
 $routeProvider
     .when('/', {
         controller : 'loginController',
@@ -8,5 +8,10 @@ $routeProvider
         controller : 'expenseController',
         templateUrl: 'app/views/expense.html',
     })
+    .when('/testexpense', {
+        controller : 'testExpenseController',
+        templateUrl: 'app/views/testexpense.html',
+    })
     .otherwise({redirectTo: '/'})
+    $locationProvider.html5Mode(true);
 });
