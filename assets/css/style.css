@@ -128,9 +128,9 @@ body {
   -webkit-transition-duration: 0.25s;
           transition-duration: 0.25s;
 }
-.container form button:hover {
+/*.container form button:hover {
   background-color: #f5f7f9;
-}
+}*/
 #btn_expense {
     margin: 10px;
 }
@@ -156,13 +156,15 @@ table.head tr th {
     padding: 40px 20% 0 17%;
 }
 .btn_add {
-  padding: 5px 5px;
+  padding: 10px;
+  border-radius: 10px;
   font-size: 15px;
   text-decoration: none;
   margin: 20px;
   color: #fff;
   position: relative;
   display: inline-block;
+  cursor: pointer;
 }
 .btn_add:active {
   transform: translate(0px, 5px);
@@ -170,8 +172,8 @@ table.head tr th {
   box-shadow: 0px 1px 0px 0px;
 }
 .red {
-  background-color: #e74c3c;
-  box-shadow: 0px 3px 0px 0px #CB3334;
+  background-color: #CB3334;
+  /*box-shadow: 0px 3px 0px 0px #CB3334;*/
 }
 .red:hover {
   background-color: #FF6656;
@@ -201,10 +203,27 @@ table.head tr th {
     margin: 14% 15% 15% 25%;
 }
 a:hover, a:focus{
-  color: #fff; 
+  color: #fff;
+  text-decoration: none;
 }
 .button_div {
     position: absolute;
     bottom: 40px;
     width: 100%;
+}
+.log_out{
+  float: right;
+  color: #CB3334;
+  font-size: 18px;
+  text-decoration: underline;
+  vertical-align: middle;
+  padding: 10px;
+  cursor: pointer;
+}
+.log_out:hover, .log_out:focus{
+  color: #CB3334;
+  text-decoration: underline;
+}
+header p{
+  display: inline-block;
 }

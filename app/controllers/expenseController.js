@@ -1,4 +1,4 @@
-myApp.controller('expenseController', function($scope){
+myApp.controller('expenseController', function($scope, $state){
     $scope.showAddExpense = true;
     $scope.Show_Add_form = function() {
         $scope.firstname="";
@@ -8,4 +8,7 @@ myApp.controller('expenseController', function($scope){
         $('.shadow-div').addClass('display_block');
         $scope.showAddExpense = $scope.showAddExpense ? false : true;
     }
+	$( ".log_out" ).click(function() {
+    	$state.go('/');
+	});
 });
