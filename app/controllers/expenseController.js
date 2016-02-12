@@ -1,4 +1,5 @@
-myApp.controller('expenseController', function($scope){
+
+myApp.controller('expenseController', function($scope, $state){
     ExpenseService.fetchExpenseDetails().then(function(data) {
         $scope.data = data;
     })
@@ -11,4 +12,7 @@ myApp.controller('expenseController', function($scope){
         $('.shadow-div').addClass('display_block');
         $scope.showAddExpense = $scope.showAddExpense ? false : true;
     }
+	$( ".log_out" ).click(function() {
+    	$state.go('/');
+	});
 });
