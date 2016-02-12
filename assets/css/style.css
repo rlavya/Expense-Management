@@ -88,11 +88,11 @@ body {
   font-weight: 200;
   color: #CB3334;
 }
-form {
+.container form {
   padding: 20px 0;
   position: relative;
 }
-form input {
+.container form input {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -111,7 +111,7 @@ form input {
           transition-duration: 0.25s;
   font-weight: 300;
 }
-form button {
+.container form button {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -128,7 +128,7 @@ form button {
   -webkit-transition-duration: 0.25s;
           transition-duration: 0.25s;
 }
-form button:hover {
+.container form button:hover {
   background-color: #f5f7f9;
 }
 #btn_expense {
@@ -190,8 +190,8 @@ table.head tr th {
     margin-left: 5%;
 }
 .form_inner{
-    width: 600px;
-    height: 380px;
+    width: 450px;
+    height: 280px;
     position: absolute;
     left: 10%;
     top: 0%;
@@ -202,4 +202,9 @@ table.head tr th {
 }
 a:hover, a:focus{
   color: #fff; 
+}
+.button_div {
+    position: absolute;
+    bottom: 40px;
+    width: 100%;
 }
