@@ -200,3 +200,6 @@ table.head tr th {
     text-align: center;
     margin: 14% 15% 15% 25%;
 }
+a:hover, a:focus{
+  color: #fff; 
+}
