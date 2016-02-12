@@ -1,4 +1,7 @@
 myApp.controller('expenseController', function($scope){
+    ExpenseService.fetchExpenseDetails().then(function(data) {
+        $scope.data = data;
+    })
     $scope.showAddExpense = true;
     $scope.Show_Add_form = function() {
         $scope.firstname="";
