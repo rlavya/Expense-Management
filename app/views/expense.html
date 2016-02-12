@@ -1,5 +1,24 @@
 <div id="btn_expense">
-<a href="" class="btn btn-info">Add expense</a>
+	<a class="btn_add red" ng-click="Show_Add_form()">Add expense</a>
+</div>
+<div ng-hide="showAddExpense">
+    <div class="form_inner">
+      <form  name="form" novalidate style="text-align:center">
+        <div class="form-group">
+            <br><h3>Add User</h3>
+            <p class="add_error" style="color:red"></p>
+            <div class="form_add">
+              <label for="firstname">First Name</label><input type="text" id="firstname" ng-model="firstname"><br>
+              <label for="lastname">Last Name</label><input type="text" id="lastname" ng-model="lastname"><br>
+              <label for="add_email">Email</label><input name="add_email" type="text" id="add_email" ng-model="add_email" required>
+            </div>
+            <div style="padding-top:10px" class="button_div">
+              <button id="submit" >Submit</button>
+              <button id="cancel" >Cancel</button>
+            </div>
+        </div>
+      </form>
+    </div>
 </div>
 <div id="expensetable">
 	<div class="wrap">

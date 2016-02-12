@@ -1,17 +1,20 @@
-myApp.config(function($routeProvider,$locationProvider) {
-$routeProvider
-    .when('/', {
-        controller : 'loginController',
+myApp.config(function($stateProvider, $urlRouterProvider){
+    $urlRouterProvider.otherwise("/")
+    $stateProvider
+    .state('/', {
+        url: "/",
         templateUrl: 'app/views/login.html',
+        controller : 'loginController'
     })
-    .when('/expense', {
-        controller : 'expenseController',
+    .state('/expense', {
+        url: "/expense",
         templateUrl: 'app/views/expense.html',
+        controller : 'expenseController'
     })
-    .when('/testexpense', {
-        controller : 'testExpenseController',
+    .state('/testexpense', {
         templateUrl: 'app/views/testexpense.html',
+        controller : 'testExpenseController'
     })
-    .otherwise({redirectTo: '/'})
-    $locationProvider.html5Mode(true);
+
+    // $locationProvider.html5Mode(true);
 });

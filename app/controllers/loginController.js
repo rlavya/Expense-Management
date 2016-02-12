@@ -1,4 +1,4 @@
-myApp.controller('loginController', function($scope, $location){
+myApp.controller('loginController', function($scope, $location, $state){
     $scope.user = {};
     $scope.submitForm = function() {
         if ($scope.email == "" || $scope.password =="" || $scope.email == undefined || $scope.password == undefined) {
@@ -12,10 +12,10 @@ myApp.controller('loginController', function($scope, $location){
                 return false;
             } else {
                 if ($scope.email == "lavya@qburst.com" && $scope.password == "lavya") {
-                    $location.path('/expense').replace();
+                    $state.go('/expense').replace();
                 }
                 else if ($scope.email == "test@qburst.com" && $scope.password == "test") {
-                    $location.path('/testexpense').replace();
+                    $state.go('/testexpense').replace();
                 }
                 else {
                     $('#show_error').html('Enter correct details..');
