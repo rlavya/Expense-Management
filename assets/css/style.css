@@ -128,10 +128,7 @@ body {
   -webkit-transition-duration: 0.25s;
           transition-duration: 0.25s;
 }
-/*.container form button:hover {
-  background-color: #f5f7f9;
-}*/
-#btn_expense {
+#btn_expense, #btn_testexpense {
     margin: 10px;
 }
 .wrap table {

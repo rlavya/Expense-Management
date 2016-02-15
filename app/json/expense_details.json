@@ -1,18 +1,41 @@
-    [
+{
+	"user1":
+		[
+            {
+                "emp_id":1000,
+                "name":"lavya",
+                "date": "26-01-2016",
+                "purpose": "cab",
+                "pm": "Vishak",
+                "rate": "200"
+		    },
+            {
+                "emp_id":1000,
+                "name":"lavya",
+                "date": "06-02-2016",
+                "purpose": "bus",
+                "pm": "Nishin",
+                "rate": "250"
+            }
+    ],
+	"user2":
+	[
+        {
+            "emp_id":1001,
+            "name":"vishnu",
+            "date": "07-05-2016",
+            "purpose": "taxi",
+            "pm": "Rinci",
+            "rate": "500"
+        },
+        {
+            "emp_id":1001,
+            "name":"vishnu",
+            "date": "01-04-2016",
+            "purpose": "auto",
+            "pm": "Saju",
+            "rate": "50"
+        }
+    ]
 
-      {
-         "id":1,
-         "date": "26-01-2016",
-         "purpose": "cab",
-         "pm": "Nishin",
-         "rate": "200"
-      },
-
-      {
-         "id":2,
-         "date": "06-02-2016",
-         "purpose": "bus",
-         "pm": "Nishin",
-         "rate": "250"
-      }
-  ]
+}

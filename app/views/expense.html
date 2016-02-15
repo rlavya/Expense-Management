@@ -5,31 +5,31 @@
 
 <div id="expensetable">
 	<div class="wrap">
-    <table class="head">
-        <tr>
-			<th>Date</th>
-			<th>Name</th>
-			<th>Project Manager</th>
-			<th>Account(in Rs)</th>
-		</tr>
-	</table>
-	<div class="inner_table">
-        <table>
-             <tr ng-repeat =  "emp in data">
-				 <td>
-					 {{emp.date | date : 'dd-mm-yyyy'}}
-			 	</td>
-				 <td>
-					 {{ emp.purpose}}
-				 </td>
-				 <td>
-					 {{ emp.pm }}
-				 </td>
-				 <td>
-					 {{ emp.rate }}
-				 </td>
-			 </tr>
-    	</table>
-    </div>
-</div>
+	    <table class="head">
+	        <tr>
+				<th>Date</th>
+				<th>Purpose</th>
+				<th>Project Manager</th>
+				<th>Account(in Rs)</th>
+			</tr>
+		</table>
+		<div class="inner_table">
+	        <table>
+	             <tr ng-repeat =  "emp in data">
+					 <td>
+						 {{emp.date | date : 'dd-mm-yyyy'}}
+				 	</td>
+					 <td>
+						 {{ emp.purpose}}
+					 </td>
+					 <td>
+						 {{ emp.pm }}
+					 </td>
+					 <td>
+						 {{ emp.rate }}
+					 </td>
+				 </tr>
+	    	</table>
+	    </div>
+	</div>
 </div>

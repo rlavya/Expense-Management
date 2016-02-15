@@ -1,8 +1,15 @@
+myApp.controller('expenseController', function($scope, $state, $http, ExpenseDetailsService, $rootScope){
+    // ExpenseDetailsService.fetchExpenseDetails().then(function(data) {
+        // $scope.data = data.users[0];
 
-myApp.controller('expenseController', function($scope, $state, ExpenseDetailsService){
-    ExpenseDetailsService.fetchExpenseDetails().then(function(data) {
-        $scope.data = data;
-    })
+        // $http.get('app/json/expense_details.json').success(function(response){
+        //     if($scope.email){
+        //         $scope.data = response.user1;
+        //     }
+        //   debugger;
+        // });
+
+    // })
     $scope.showAddExpense = true;
     $scope.Show_Add_form = function() {
         $scope.date="";
@@ -19,7 +26,7 @@ myApp.controller('expenseController', function($scope, $state, ExpenseDetailsSer
             $('.add_error').html('Enter all details..');
             return false;
         }else {
-            $scope.data.push({ 'date':$scope.date, 'purpose': $scope.purpose, 'pm':$scope.pm, 'rate':$scope.rate });
+            $rootScope.data.push({ 'date':$scope.date, 'purpose': $scope.purpose, 'pm':$scope.pm, 'rate':$scope.rate });
             $('.shadow-div').removeClass('display_block');
             $scope.showAddExpense = $scope.showAddExpense ? false : true;
         }
