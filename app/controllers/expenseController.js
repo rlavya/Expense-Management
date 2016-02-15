@@ -23,7 +23,6 @@ myApp.controller('expenseController', function($scope, $state, ExpenseDetailsSer
             $('.shadow-div').removeClass('display_block');
             $scope.showAddExpense = $scope.showAddExpense ? false : true;
         }
-
     }
     $scope.HideAdd = function() {
         $('.shadow-div').removeClass('display_block');

@@ -5,7 +5,7 @@
          "date": "26-01-2016",
          "purpose": "cab",
          "pm": "Nishin",
-         "rate": "200rs"
+         "rate": "200"
       },
 
       {
@@ -13,6 +13,6 @@
          "date": "06-02-2016",
          "purpose": "bus",
          "pm": "Nishin",
-         "rate": "250rs"
+         "rate": "250"
       }
   ]
