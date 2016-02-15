@@ -15,7 +15,20 @@
 	</table>
 	<div class="inner_table">
         <table>
-        
+             <tr ng-repeat =  "emp in data">
+				 <td>
+					 {{emp.date}}
+			 	</td>
+				 <td>
+					 {{ emp.purpose}}
+				 </td>
+				 <td>
+					 {{ emp.pm }}
+				 </td>
+				 <td>
+					 {{ emp.rate }}
+				 </td>
+			 </tr>
     	</table>
     </div>
 </div>

@@ -1,10 +1,9 @@
-{ "user1" :
     [
 
       {
          "id":1,
          "date": "26-01-2016",
-         "purpose": "cab frm qburst to tvm railway station",
+         "purpose": "cab",
          "pm": "Nishin",
          "rate": "200rs"
       },
@@ -12,27 +11,8 @@
       {
          "id":2,
          "date": "6-02-2016",
-         "purpose": "bus from tvm to kochi",
+         "purpose": "bus",
          "pm": "Nishin",
          "rate": "250rs"
       }
-  ],
-"user2" :
-   [
-     {
-        "id":1,
-        "date": "26-01-2016",
-        "purpose": "cab frm qburst to tvm railway station",
-        "pm": "Saju",
-        "rate": "200rs"
-     },
-
-     {
-        "id":2,
-        "date": "6-02-2016",
-        "purpose": "bus from tvm to kochi",
-        "pm": "Saju",
-        "rate": "250rs"
-     }
-]
-}
+  ]
