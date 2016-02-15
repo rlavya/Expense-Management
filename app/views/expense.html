@@ -17,7 +17,7 @@
         <table>
              <tr ng-repeat =  "emp in data">
 				 <td>
-					 {{emp.date}}
+					 {{emp.date | date : 'dd-mm-yyyy'}}
 			 	</td>
 				 <td>
 					 {{ emp.purpose}}
