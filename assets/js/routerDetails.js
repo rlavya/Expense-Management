@@ -14,7 +14,7 @@ myApp.config(function($stateProvider, $urlRouterProvider){
     .state('/testexpense', {
         url: "/testexpense",
         templateUrl: 'app/views/testexpense.html',
-        controller : 'testExpenseController'
+        controller : 'testExpenseController',
     })
 
     // $locationProvider.html5Mode(true);

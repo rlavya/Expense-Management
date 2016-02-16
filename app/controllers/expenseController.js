@@ -1,15 +1,4 @@
 myApp.controller('expenseController', function($scope, $state, $http, ExpenseDetailsService, $rootScope){
-    // ExpenseDetailsService.fetchExpenseDetails().then(function(data) {
-        // $scope.data = data.users[0];
-
-        // $http.get('app/json/expense_details.json').success(function(response){
-        //     if($scope.email){
-        //         $scope.data = response.user1;
-        //     }
-        //   debugger;
-        // });
-
-    // })
     $scope.showAddExpense = true;
     $scope.Show_Add_form = function() {
         $scope.date="";
