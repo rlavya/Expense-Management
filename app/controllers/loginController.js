@@ -16,10 +16,12 @@ myApp.controller('loginController', function($scope, $location, $state, $rootSco
                     if ($scope.email == "lavya@qburst.com" && $scope.password == "lavya") {
                         $rootScope.data = response.user1;
                         $state.go('/expense');
+                        $rootScope.total = $rootScope.total || response.user1[0].rate + response.user1[1].rate;
                     }
                     else if ($scope.email == "vishnu@qburst.com" && $scope.password == "vishnu") {
                         $rootScope.data = response.user2;
                         $state.go('/expense');
+                        $rootScope.total = $rootScope.total || response.user1[0].rate + response.user1[1].rate;
                     }
                     else if ($scope.email == "test@qburst.com" && $scope.password == "test") {
                         $rootScope.total = $rootScope.total || response.user1[0].rate + response.user1[1].rate;
