@@ -1,6 +1,3 @@
-<div id="btn_testexpense">
-	<a class="btn_add red" ng-click="Show_reimburse_test_form()">Add reimbursement</a>
-</div>
 <add-testdata ng-hide="showAddTestExpense"></add-testdata>
 <div id="expensetable">
 	<div class="wrap">
@@ -16,14 +13,19 @@
                  <tr>
                      <td>{{user1}}</td>
                      <td>{{ $root.total }}</td>
-                     <td></td>
+                     <td style="cursor:pointer;" ng-click="reimburse('amount_reimburse')" ng-model="amount_reimburse">{{amount_reimburse}}
+					 </td>
     			 </tr>
                  <tr>
                      <td>{{user2}}</td>
-                     <td></td>
-                     <td></td>
+                     <td>{{ $root.total2 }}</td>
+                     <td style="cursor:pointer;" ng-click="reimburse('amount_reimburse_one')" ng-model="amount_reimburse_one">{{amount_reimburse_one}}
+					</td>
     			 </tr>
         	</table>
+			<p style="text-align:center; color:#CB3334; margin-top: 20px;">
+				Click on Reimbursement column to enter the corresponding reimbursement amount.
+			</p>
         </div>
     </div>
 </div>

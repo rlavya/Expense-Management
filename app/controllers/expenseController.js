@@ -15,8 +15,12 @@ myApp.controller('expenseController', function($scope, $state, $http, ExpenseDet
             $('.add_error').html('Enter all details..');
             return false;
         }else {
-            $rootScope.total = $rootScope.total + $scope.rate;
-            $rootScope.data.push({ 'date':$scope.date, 'purpose': $scope.purpose, 'pm':$scope.pm, 'rate':$scope.rate, 'total':$rootScope.total });
+            if ($rootScope.data[0].name == 'lavya') {
+                $rootScope.total = $rootScope.total + $scope.rate;
+            } else if ($rootScope.data[0].name == 'vishnu') {
+                $rootScope.total2 = $rootScope.total2 + $scope.rate;debugger;
+            }
+            $rootScope.data.push({ 'date':$scope.date, 'purpose': $scope.purpose, 'pm':$scope.pm, 'rate':$scope.rate});
             $('.shadow-div').removeClass('display_block');
             $scope.showAddExpense = $scope.showAddExpense ? false : true;
         }

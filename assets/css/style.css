@@ -3,18 +3,10 @@
     display: block;
     width: 100%;
 }
-#footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    clear: both;
-    font-size:10px
-}
 .img_span {
     background-image: url('../../assets/images/sds.jpg');
     background-size: contain;
 }
-
 #header {
     color: black;
     font-size:30px;
@@ -104,7 +96,7 @@ body {
   padding: 10px 15px;
   margin: 0 auto 10px auto;
   display: block;
-  text-align: center;
+  text-align: left;
   font-size: 18px;
   color: black;
   -webkit-transition-duration: 0.25s;
@@ -216,4 +208,8 @@ a:hover, a:focus{
 }
 header p{
   display: inline-block;
+}
+#reimburse_form{
+    padding: 60px;
+    height: 230px;
 }
