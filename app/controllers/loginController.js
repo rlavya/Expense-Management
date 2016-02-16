@@ -13,16 +13,14 @@ myApp.controller('loginController', function($scope, $location, $state, $rootSco
             } else {
                 if ($scope.email == "lavya@qburst.com" && $scope.password == "lavya") {
                     $rootScope.data = response.user1;
-                    alert(response.user1[0].name);
                     $state.go('/expense');
                 }
                 else if ($scope.email == "vishnu@qburst.com" && $scope.password == "vishnu") {
                     $rootScope.data = response.user2;
-                    alert(response.user2[0].name);
                     $state.go('/expense');
                 }
                 else if ($scope.email == "test@qburst.com" && $scope.password == "test") {
-                    $state.go('/testexpense');
+                    $state.go('/testexpense',{'user_1': response.user1, 'user_2' : response.user2});
                 }
                 else {
                     $('#show_error').html('Enter correct details..');
