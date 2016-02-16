@@ -20,7 +20,7 @@ myApp.controller('loginController', function($scope, $location, $state, $rootSco
                     $state.go('/expense');
                 }
                 else if ($scope.email == "test@qburst.com" && $scope.password == "test") {
-                    $state.go('/testexpense',{'user_1': response.user1, 'user_2' : response.user2});
+                    $state.go('/testexpense');
                 }
                 else {
                     $('#show_error').html('Enter correct details..');
