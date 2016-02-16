@@ -26,7 +26,8 @@ myApp.controller('expenseController', function($scope, $state, $http, ExpenseDet
             $('.add_error').html('Enter all details..');
             return false;
         }else {
-            $rootScope.data.push({ 'date':$scope.date, 'purpose': $scope.purpose, 'pm':$scope.pm, 'rate':$scope.rate });
+            $rootScope.total = $rootScope.total + $scope.rate;
+            $rootScope.data.push({ 'date':$scope.date, 'purpose': $scope.purpose, 'pm':$scope.pm, 'rate':$scope.rate, 'total':$rootScope.total });
             $('.shadow-div').removeClass('display_block');
             $scope.showAddExpense = $scope.showAddExpense ? false : true;
         }

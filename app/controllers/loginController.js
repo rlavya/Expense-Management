@@ -1,4 +1,5 @@
 myApp.controller('loginController', function($scope, $location, $state, $rootScope, $http){
+    $rootScope.total = $rootScope.total || 0;
     $scope.submitForm = function() {
         $http.get('app/json/expense_details.json').success(function(response){
         if ($scope.email == "" || $scope.password =="" || $scope.email == undefined || $scope.password == undefined) {
@@ -13,15 +14,19 @@ myApp.controller('loginController', function($scope, $location, $state, $rootSco
             } else {
                 if ($scope.email == "lavya@qburst.com" && $scope.password == "lavya") {
                     $rootScope.data = response.user1;
+                    $rootScope.total = response.user1[0].rate + response.user1[1].rate;
                     alert(response.user1[0].name);
                     $state.go('/expense');
                 }
                 else if ($scope.email == "vishnu@qburst.com" && $scope.password == "vishnu") {
                     $rootScope.data = response.user2;
+                    $rootScope.total = response.user1[0].rate + response.user1[1].rate;
                     alert(response.user2[0].name);
                     $state.go('/expense');
                 }
                 else if ($scope.email == "test@qburst.com" && $scope.password == "test") {
+                    $rootScope.total = $rootScope.total || response.user1[0].rate + response.user1[1].rate;
+                    alert("test");
                     $state.go('/testexpense');
                 }
                 else {
