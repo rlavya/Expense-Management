@@ -21,7 +21,7 @@ myApp.controller('loginController', function($scope, $location, $state, $rootSco
                     else if ($scope.email == "vishnu@qburst.com" && $scope.password == "vishnu") {
                         $rootScope.data = response.user2;
                         $state.go('/expense');
-                        $rootScope.total = $rootScope.total || response.user1[0].rate + response.user1[1].rate;
+                        $rootScope.total2 = $rootScope.total2 || response.user2[0].rate + response.user2[1].rate;
                     }
                     else if ($scope.email == "test@qburst.com" && $scope.password == "test") {
                         $rootScope.total = $rootScope.total || response.user1[0].rate + response.user1[1].rate;
