@@ -1,9 +1,11 @@
-myApp.controller('loginController', function($scope, $location, $state, $rootScope, $http){
+myApp.controller('loginController', function($scope, $location, $state, $rootScope, $http, ExpenseDetailsService){
+    console.log($rootScope.fullData);
     $rootScope.total = $rootScope.total || 0;
     $rootScope.total2 = $rootScope.total2 || 0;
     $scope.submitForm = function() {
         $http.get('app/json/expense_details.json').success(function(response){
             if ($scope.email == "" || $scope.password =="" || $scope.email == undefined || $scope.password == undefined) {
+                
                 $('#show_error').show();
                 $('#show_error').html('Enter all details..');
                 return false;
@@ -26,8 +28,10 @@ myApp.controller('loginController', function($scope, $location, $state, $rootSco
                     else if ($scope.email == "test@qburst.com" && $scope.password == "test") {
                         $rootScope.total = $rootScope.total || response.user1[0].rate + response.user1[1].rate;
                         $rootScope.total2 = $rootScope.total2 || response.user2[0].rate + response.user2[1].rate;
-                        // debugger;
                         $state.go('/testexpense');
+                    }
+                    else if ($scope.email == "nishin@qburst.com" && $scope.password == "nishin") {
+                        $state.go('/approverexpense');
                     }
                     else {
                         $('#show_error').html('Enter correct details..');

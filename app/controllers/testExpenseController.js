@@ -23,7 +23,4 @@ myApp.controller('testExpenseController', function($scope, $state, $rootScope, $
 		$scope.showAddTestExpense = true;
 		$('.shadow-div').removeClass('display_block');
 	};
-$( ".log_out" ).click(function() {
-    	$state.go('/');
-	});
 });

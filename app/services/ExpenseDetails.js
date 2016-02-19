@@ -1,16 +1,13 @@
-myApp.factory('ExpenseDetailsService' ,['$http' ,'$q', function($http ,$q){
+myApp.factory('ExpenseDetailsService' ,['$http' , '$rootScope' , function($http ,$q, $rootScope){
     return{
-        fetchExpenseDetails: function() {
-            return $http.get('app/json/expense_details.json')
-                    .then(
-                            function(response){
-                                return response.data;
-                            },
-                            function(errResponse){
-                                console.error('Error while fetching users');
-                                return $q.reject(errResponse);
-                            }
-                    );
-        }
+        // fetchExpenseDetails: function() {
+        //     return $http.get('app/json/expense_details.json')
+        //             .then(
+        //                     function(response){
+        //                         return response.data;
+        //                     },
+        //                
+        //             );
+        // }
     }
 }]);
