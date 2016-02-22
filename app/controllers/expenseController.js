@@ -1,5 +1,4 @@
 myApp.controller('expenseController', function($scope, $state, $http, ExpenseDetailsService, $rootScope){
-    console.log($rootScope.fullData);
     $scope.showAddExpense = true;
     $scope.Show_Add_form = function() {
         $scope.date="";
@@ -16,13 +15,13 @@ myApp.controller('expenseController', function($scope, $state, $http, ExpenseDet
             $('.add_error').html('Enter all details..');
             return false;
         } else {
-            if ($rootScope.data[0].name == 'lavya') {
+            if ($rootScope.fullData[0].name == 'lavya') {
                 $rootScope.total = $rootScope.total + $scope.rate;
-            } else if ($rootScope.data[0].name == 'vishnu') {
+            } else if ($rootScope.fullData[0].name == 'vishnu') {
                 $rootScope.total2 = $rootScope.total2 + $scope.rate;
             }
-            $rootScope.fullData.push({ 'date':$scope.date, 'purpose': $scope.purpose, 'pm':$scope.pm, 'rate':$scope.rate, 'name' : $rootScope.data[0].name});
-            $rootScope.data.push({ 'date':$scope.date, 'purpose': $scope.purpose, 'pm':$scope.pm, 'rate':$scope.rate});
+            $rootScope.fullData.push({ 'date':$scope.date, 'purpose': $scope.purpose, 'pm':$scope.pm, 'rate':$scope.rate, 'name' : $rootScope.user});
+            //$rootScope.fullData.push({ 'date':$scope.date, 'purpose': $scope.purpose, 'pm':$scope.pm, 'rate':$scope.rate});
             $('.shadow-div').removeClass('display_block');
             $scope.showAddExpense = $scope.showAddExpense ? false : true;
         }
