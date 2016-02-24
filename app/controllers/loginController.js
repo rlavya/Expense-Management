@@ -1,6 +1,5 @@
 myApp.controller('loginController', function($scope, $location, $state, $rootScope, $http, ExpenseDetailsService){
-    // $rootScope.total = $rootScope.total || 0;
-    // $rootScope.total2 = $rootScope.total2 || 0;
+
     $scope.submitForm = function() {
         $http.get('app/json/expense_details.json').success(function(response){
             if ($scope.email == "" || $scope.password =="" || $scope.email == undefined || $scope.password == undefined) {

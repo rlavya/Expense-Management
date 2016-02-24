@@ -31,25 +31,8 @@ myApp.controller('expenseController', function($scope, $state, $http, ExpenseDet
                 }
             }
 
-
-
-        $rootScope.fullData.push({ 'date':$scope.date, 'purpose': $scope.purpose, 'pm':$scope.pm, 'rate':$scope.rate, 'name' : $rootScope.user});
+            $rootScope.fullData.push({ 'date':$scope.date, 'purpose': $scope.purpose, 'pm':$scope.pm, 'rate':$scope.rate, 'name' : $rootScope.user});
       
-        /*for (var i = 0; i<$rootScope.fullData.length; i++) {
-
-           if ($rootScope.fullData[i].name == $rootScope.user) {
-            
-            if ($rootScope.user == 'lavya') {
-                 $rootScope.total = $rootScope.total + $rootScope.fullData[i].rate;
-                // console.log($rootScope.fullData[i]);
-            } else if ($rootScope.fullData[i].name == 'vishnu') {
-                // $rootScope.fullData.push({ 'date':$scope.date, 'purpose': $scope.purpose, 'pm':$scope.pm, 'rate':$scope.rate, 'name' : $rootScope.user});
-                 $rootScope.total2 = $rootScope.total2 + $rootScope.fullData[i].rate;
-                // console.log($rootScope.fullData[i]);
-            }
-                
-            } 
-        } */
             $('.shadow-div').removeClass('display_block');
             $scope.showAddExpense = $scope.showAddExpense ? false : true;
         }
