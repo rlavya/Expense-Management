@@ -155,14 +155,8 @@ table.head tr th {
   display: inline-block;
   cursor: pointer;
 }
-/*.btn_add:active {
-  transform: translate(0px, 5px);
-  -webkit-transform: translate(0px, 5px);
-  box-shadow: 0px 1px 0px 0px;
-}*/
 .red {
   background-color: #CB3334;
-  /*box-shadow: 0px 3px 0px 0px #CB3334;*/
 }
 .red:hover {
   background-color: #FF6656;
@@ -171,7 +165,7 @@ table.head tr th {
     width: 25%;
     text-align: right;
 }
-.form_inner input {
+.form_inner input, .form_inner select{
     width: 55%;
     margin-left: 5%;
 }
@@ -210,6 +204,10 @@ header p{
   display: inline-block;
 }
 #reimburse_form{
-    padding: 60px;
-    height: 230px;
+  padding: 60px;
+  height: 230px;
+}
+.form_inner form h3{
+  color: #CB3334;
+  margin-bottom: 20px;
 }

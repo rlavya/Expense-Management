@@ -16,6 +16,10 @@ myApp.config(function($stateProvider, $urlRouterProvider){
         templateUrl: 'app/views/testexpense.html',
         controller : 'testExpenseController',
     })
-
+    .state('/approverexpense', {
+        url: "/approverexpense",
+        templateUrl: 'app/views/approveExpense.html',
+        controller : 'approveExpenseController',
+    })
     // $locationProvider.html5Mode(true);
 });
