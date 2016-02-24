@@ -15,13 +15,41 @@ myApp.controller('expenseController', function($scope, $state, $http, ExpenseDet
             $('.add_error').html('Enter all details..');
             return false;
         } else {
-            if ($rootScope.fullData[0].name == 'lavya') {
-                $rootScope.total = $rootScope.total + $scope.rate;
-            } else if ($rootScope.fullData[0].name == 'vishnu') {
-                $rootScope.total2 = $rootScope.total2 + $scope.rate;
+            if( $rootScope.user == "lavya") {
+                $rootScope.total=0;
+                $rootScope.lavyaDetails.push({ 'date':$scope.date, 'purpose': $scope.purpose, 'pm':$scope.pm, 'rate':$scope.rate, 'name' : $rootScope.user});
+                for (var i = 0; i<$rootScope.lavyaDetails.length; i++) {
+                    $rootScope.total+= $rootScope.lavyaDetails[i].rate;
+                }
+                console.log($rootScope.lavyaDetails);
             }
-            $rootScope.fullData.push({ 'date':$scope.date, 'purpose': $scope.purpose, 'pm':$scope.pm, 'rate':$scope.rate, 'name' : $rootScope.user});
-            //$rootScope.fullData.push({ 'date':$scope.date, 'purpose': $scope.purpose, 'pm':$scope.pm, 'rate':$scope.rate});
+            else {
+                $rootScope.total2=0;
+                $rootScope.vishnuDetails.push({ 'date':$scope.date, 'purpose': $scope.purpose, 'pm':$scope.pm, 'rate':$scope.rate, 'name' : $rootScope.user});
+                for (var i = 0; i<$rootScope.vishnuDetails.length; i++) {
+                    $rootScope.total2+= $rootScope.vishnuDetails[i].rate;
+                }
+            }
+
+
+
+        $rootScope.fullData.push({ 'date':$scope.date, 'purpose': $scope.purpose, 'pm':$scope.pm, 'rate':$scope.rate, 'name' : $rootScope.user});
+      
+        /*for (var i = 0; i<$rootScope.fullData.length; i++) {
+
+           if ($rootScope.fullData[i].name == $rootScope.user) {
+            
+            if ($rootScope.user == 'lavya') {
+                 $rootScope.total = $rootScope.total + $rootScope.fullData[i].rate;
+                // console.log($rootScope.fullData[i]);
+            } else if ($rootScope.fullData[i].name == 'vishnu') {
+                // $rootScope.fullData.push({ 'date':$scope.date, 'purpose': $scope.purpose, 'pm':$scope.pm, 'rate':$scope.rate, 'name' : $rootScope.user});
+                 $rootScope.total2 = $rootScope.total2 + $rootScope.fullData[i].rate;
+                // console.log($rootScope.fullData[i]);
+            }
+                
+            } 
+        } */
             $('.shadow-div').removeClass('display_block');
             $scope.showAddExpense = $scope.showAddExpense ? false : true;
         }
