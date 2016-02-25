@@ -18,7 +18,7 @@ myApp.controller('expenseController', function($scope, $state, $http, ExpenseDet
             if( $rootScope.user == "lavya") {
                 $rootScope.total=0;
                 $rootScope.lavyaDetails.push({ 'date':$scope.date, 'purpose': $scope.purpose, 'pm':$scope.pm, 'rate':$scope.rate, 'name' : $rootScope.user});
-                for (var i = 0; i<$rootScope.lavyaDetails.length; i++) {
+                for (var i = 0; i< $rootScope.lavyaDetails.length; i++) {
                     $rootScope.total+= $rootScope.lavyaDetails[i].rate;
                 }
                 console.log($rootScope.lavyaDetails);
@@ -31,8 +31,9 @@ myApp.controller('expenseController', function($scope, $state, $http, ExpenseDet
                 }
             }
 
-            $rootScope.fullData.push({ 'date':$scope.date, 'purpose': $scope.purpose, 'pm':$scope.pm, 'rate':$scope.rate, 'name' : $rootScope.user});
-      
+            $rootScope.fullData.push({ 'date':$scope.date, 'purpose': $scope.purpose, 'pm':$scope.pm, 'rate':$scope.rate, 'name' : $rootScope.user, });
+            console.log($rootScope.fullData);
+        
             $('.shadow-div').removeClass('display_block');
             $scope.showAddExpense = $scope.showAddExpense ? false : true;
         }

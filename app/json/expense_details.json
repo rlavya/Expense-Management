@@ -8,7 +8,8 @@
                 "purpose": "cab",
                 "pm": "Vishak",
                 "rate": 200,
-                "total": 0
+                "status": 0,
+                "total " : 0
 		    },
             {
                 "emp_id":1000,
@@ -17,7 +18,8 @@
                 "purpose": "bus",
                 "pm": "Nishin",
                 "rate": 350,
-                "total": 0
+                "status": 0,
+                "total " : 0
             }
     ],
 	"user2":
@@ -29,7 +31,8 @@
             "purpose": "taxi",
             "pm": "Rinci",
             "rate": 500,
-            "total": 0
+            "status": 0,
+            "total2 " : 0
         },
         {
             "emp_id":1001,
@@ -38,7 +41,8 @@
             "purpose": "auto",
             "pm": "Saju",
             "rate": 250,
-            "total": 0
+            "status": 0,
+            "total2 " : 0
         }
     ]
 

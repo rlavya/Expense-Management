@@ -12,11 +12,10 @@ myApp.controller('intialiseController', function($scope, $http, $rootScope){
         $rootScope.total2=0;
   
         for (var i = 0;i < response.user2.length;  i++) {
-             $rootScope.fullData.push(response.user2[i]);
+            $rootScope.fullData.push(response.user2[i]);
         };
         for (var i = 0;i < response.user1.length;  i++) {
-             $rootScope.fullData.push(response.user1[i]);
+            $rootScope.fullData.push(response.user1[i]);
         };
-     
 	})
 });
