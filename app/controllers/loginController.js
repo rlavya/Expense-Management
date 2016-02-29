@@ -23,9 +23,20 @@ myApp.controller('loginController', function($scope, $location, $state, $rootSco
                         $state.go('/expense');
                     }
                     else if ($scope.email == "test@qburst.com" && $scope.password == "test") {
-                        $rootScope.total = $rootScope.total || response.user1[0].rate + response.user1[1].rate;
-                        $rootScope.total2 = $rootScope.total2 || response.user2[0].rate + response.user2[1].rate;
-                        debugger;
+                        $rootScope.total=0;
+                        $rootScope.total2=0;
+                        for (var i = 0;i< $rootScope.fullData.length ; i ++) {
+                            if ($rootScope.fullData[i].name== 'lavya') {
+                                if ($rootScope.fullData[i].status == 1) {
+                                    $rootScope.total += $rootScope.fullData[i].rate;
+                                }
+                            }else if ($rootScope.fullData[i].name== 'vishnu') {
+                                if ($rootScope.fullData[i].status == 1) {
+                                    $rootScope.total2 += $rootScope.fullData[i].rate;
+                                }
+                            };
+                           
+                        };
                         $state.go('/testexpense');
                     }
                     else if ($scope.email == "nishin@qburst.com" && $scope.password == "nishin") {

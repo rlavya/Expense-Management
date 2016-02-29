@@ -11,13 +11,13 @@
         </table>
         <div class="inner_table">
             <table>
-                <tr ng-repeat="data in fullData | filter: { pm : 'Nishin'}">
+                <tr ng-repeat="data in fullData" ng-show="data.pm == 'Nishin'">
                     <td>{{ data.date }}</td>
                     <td>{{ data.name }}</td>
                     <td>{{ data.purpose }}</td>
                     <td>{{ data.rate }}</td>
                     <td>
-                        <input type="checkbox" ng-click="approve_check()">
+                        <input type="checkbox" ng-click="approve_check($index,data.name)">
                     </td>
                 </tr>
             </table>

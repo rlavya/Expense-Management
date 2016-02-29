@@ -8,7 +8,7 @@
                 "purpose": "cab",
                 "pm": "Vishak",
                 "rate": 200,
-                "status": 0,
+                "status": 1,
                 "total " : 0
 		    },
             {
@@ -31,7 +31,7 @@
             "purpose": "taxi",
             "pm": "Rinci",
             "rate": 500,
-            "status": 0,
+            "status": 1,
             "total2 " : 0
         },
         {
@@ -41,7 +41,7 @@
             "purpose": "auto",
             "pm": "Saju",
             "rate": 250,
-            "status": 0,
+            "status": 1,
             "total2 " : 0
         }
     ]
