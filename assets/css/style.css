@@ -140,6 +140,7 @@ table.head tr th {
 .inner_table {
     height: 170px;
     overflow-y: auto;
+    overflow-x: hidden;
 }
 #expensetable{
     padding: 40px 20% 0 17%;
@@ -171,7 +172,7 @@ table.head tr th {
 }
 .form_inner{
     width: 450px;
-    height: 280px;
+    height: 320px;
     position: absolute;
     left: 10%;
     top: 0%;

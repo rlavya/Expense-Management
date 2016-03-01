@@ -17,7 +17,7 @@
                     <td>{{ data.purpose }}</td>
                     <td>{{ data.rate }}</td>
                     <td>
-                        <input type="checkbox" ng-click="approve_check($index,data.name)">
+                        <input id="approve_check" type="checkbox" ng-click="approve_check($index,data.name)" ng-checked="data.status == 1">
                     </td>
                 </tr>
             </table>

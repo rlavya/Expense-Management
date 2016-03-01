@@ -5,9 +5,12 @@
         <p class="add_error" style="color:red"></p>
         <label for="date">Date</label><input id="date" ng-model="date" placeholder="dd-mm-yyyy"><br>
         <label for="purpose">Purpose</label><input type="text" id="purpose" ng-model="purpose"><br>
+        <label for="project">Project</label>
+        <select id="project" ng-model="project" ng-options="project for project in ['Bozzuto', 'ReactorOne T and M', 'BNC', 'Service forms and Dashboard','A2A','Savenia','Innolance']" ng-init="project='Bozzuto'"></select>
         <label for="pm">Approver</label>
         <select id="pm" ng-model="pm" ng-options="pm for pm in ['Nishin', 'Saju', 'Rincy', 'Vishak']" ng-init="pm='Nishin'"></select>
-        <label for="rate">Rate</label><input type="number" id="rate" ng-model="rate"><br>
+
+        <label for="rate">Amount</label><input type="number" id="rate" ng-model="rate"><br>
         <div style="padding-top:10px" class="button_div">
           <button id="submit" ng-click="SubmitAdd()">Submit</button>
           <button id="cancel" ng-click="HideAdd()">Cancel</button>
