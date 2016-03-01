@@ -51,74 +51,74 @@
     display: block;
 }
 body {
-  font-family: 'Source Sans Pro', sans-serif;
-  color: black;
-  font-weight: 300;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: black;
+    font-weight: 300;
 }
 
 .wrapper {
-   background-color: #fff;
-   position: absolute;
-   left: 0;
-   width: 100%;
-   height: 80%;
-   overflow: hidden;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 80%;
+    overflow: hidden;
 }
 .container {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 80px 0;
-  height: 400px;
-  text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 80px 0;
+    height: 400px;
+    text-align: center;
 }
 .container h1 {
-  font-size: 40px;
-  -webkit-transition-duration: 1s;
-          transition-duration: 1s;
-  -webkit-transition-timing-function: ease-in-put;
-          transition-timing-function: ease-in-put;
-  font-weight: 200;
-  color: #CB3334;
+    font-size: 40px;
+    -webkit-transition-duration: 1s;
+            transition-duration: 1s;
+    -webkit-transition-timing-function: ease-in-put;
+            transition-timing-function: ease-in-put;
+    font-weight: 200;
+    color: #CB3334;
 }
 .container form {
-  padding: 20px 0;
-  position: relative;
+    padding: 20px 0;
+    position: relative;
 }
 .container form input {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  outline: 0;
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  background-color: #f6f6f6;
-  width: 250px;
-  border-radius: 3px;
-  padding: 10px 15px;
-  margin: 0 auto 10px auto;
-  display: block;
-  text-align: left;
-  font-size: 18px;
-  color: black;
-  -webkit-transition-duration: 0.25s;
-          transition-duration: 0.25s;
-  font-weight: 300;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    outline: 0;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background-color: #f6f6f6;
+    width: 250px;
+    border-radius: 3px;
+    padding: 10px 15px;
+    margin: 0 auto 10px auto;
+    display: block;
+    text-align: left;
+    font-size: 18px;
+    color: black;
+    -webkit-transition-duration: 0.25s;
+            transition-duration: 0.25s;
+    font-weight: 300;
 }
 .container form button {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  outline: 0;
-  background-color: white;
-  border: 0;
-  padding: 10px 15px;
-  color: #fff;
-  background-color:  #CB3334;
-  border-radius: 3px;
-  width: 250px;
-  cursor: pointer;
-  font-size: 18px;
-  -webkit-transition-duration: 0.25s;
-          transition-duration: 0.25s;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    outline: 0;
+    background-color: white;
+    border: 0;
+    padding: 10px 15px;
+    color: #fff;
+    background-color:  #CB3334;
+    border-radius: 3px;
+    width: 250px;
+    cursor: pointer;
+    font-size: 18px;
+    -webkit-transition-duration: 0.25s;
+            transition-duration: 0.25s;
 }
 #btn_expense, #btn_testexpense {
     margin: 10px;
@@ -146,21 +146,21 @@ table.head tr th {
     padding: 40px 20% 0 17%;
 }
 .btn_add {
-  padding: 10px;
-  border-radius: 10px;
-  font-size: 15px;
-  text-decoration: none;
-  margin: 20px;
-  color: #fff;
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 15px;
+    text-decoration: none;
+    margin: 20px;
+    color: #fff;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
 }
 .red {
-  background-color: #CB3334;
+    background-color: #CB3334;
 }
 .red:hover {
-  background-color: #FF6656;
+    background-color: #FF6656;
 }
 .form_inner label{
     width: 25%;
@@ -172,7 +172,7 @@ table.head tr th {
 }
 .form_inner{
     width: 450px;
-    height: 320px;
+    height: 340px;
     position: absolute;
     left: 10%;
     top: 0%;
@@ -182,33 +182,42 @@ table.head tr th {
     margin: 14% 15% 15% 25%;
 }
 a:hover, a:focus{
-  color: #fff;
-  text-decoration: none;
+    color: #fff;
+    text-decoration: none;
 }
 .button_div {
     width: 100%;
 }
 .log_out{
-  float: right;
-  color: #CB3334;
-  font-size: 18px;
-  text-decoration: underline;
-  vertical-align: middle;
-  padding: 10px;
-  cursor: pointer;
+    float: right;
+    color: #CB3334;
+    font-size: 18px;
+    text-decoration: underline;
+    vertical-align: middle;
+    padding: 10px;
+    cursor: pointer;
 }
 .log_out:hover, .log_out:focus{
-  color: #CB3334;
-  text-decoration: underline;
+    color: #CB3334;
+    text-decoration: underline;
 }
 header p{
-  display: inline-block;
+    display: inline-block;
+    text-indent: -70px;
 }
 #reimburse_form{
-  padding: 60px;
-  height: 230px;
+    padding: 60px;
+    height: 230px;
 }
 .form_inner form h3{
-  color: #CB3334;
-  margin-bottom: 20px;
+    color: #CB3334;
+    margin-bottom: 20px;
+}
+.radio_class{
+    display: inline-block;
+    width: 30%;
+    vertical-align: bottom;
+}
+.radio_class input[name = "client"] {
+    width: 14px;
 }
