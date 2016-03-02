@@ -9,18 +9,22 @@
 	        <tr>
 				<th>Date</th>
 				<th>Purpose</th>
-				<th>Project Manager</th>
+				<th>Project</th>
+				<th>Approver</th>
 				<th>Account(in Rs)</th>
 			</tr>
 		</table>
 		<div class="inner_table">
 	        <table>
-	             <tr ng-repeat =  "emp in data">
+	             <tr ng-repeat =  "emp in fullData | filter: { name : $root.user}">
 					 <td>
 						 {{emp.date | date : 'dd-mm-yyyy'}}
 				 	</td>
 					 <td>
 						 {{ emp.purpose}}
+					 </td>
+					 <td>
+					 	{{ emp.project }}
 					 </td>
 					 <td>
 						 {{ emp.pm }}
