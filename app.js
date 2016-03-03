@@ -1,4 +1,4 @@
-var myApp = angular.module('myApp',  ['ui.router']);
+var myApp = angular.module('myApp',  ['datatables', 'ui.router']);
 myApp.controller('intialiseController', function($scope, $http, $rootScope){
 	$http.get('app/json/expense_details.json').success(function(response){
 

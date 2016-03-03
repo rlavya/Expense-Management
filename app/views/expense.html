@@ -5,34 +5,40 @@
 
 <div id="expensetable">
 	<div class="wrap">
-	    <table class="head">
-	        <tr>
-				<th>Date</th>
-				<th>Purpose</th>
-				<th>Project</th>
-				<th>Approver</th>
-				<th>Account(in Rs)</th>
-			</tr>
-		</table>
 		<div class="inner_table">
-	        <table>
-	             <tr ng-repeat =  "emp in fullData | filter: { name : $root.user}">
-					 <td>
+	        <table datatable="ng" dt-options="showCase.dtOptions" dt-column-defs="showCase.dtColumnDefs" class="row-border hover">
+	        <thead>	             
+				<tr class="head">
+					<th>Date</th>
+					<th>Purpose</th>
+					<th>Project</th>
+					<th>Approver</th>
+					<th>Account(in Rs)</th>
+					<th>Invoice</th>
+				</tr>
+			</thead>
+			<tbody>
+	            <tr ng-repeat =  "emp in fullData | filter: { name : $root.user}">
+					<td>
 						 {{emp.date | date : 'dd-mm-yyyy'}}
 				 	</td>
-					 <td>
+					<td>
 						 {{ emp.purpose}}
-					 </td>
-					 <td>
+					</td>
+					<td>
 					 	{{ emp.project }}
-					 </td>
-					 <td>
+					</td>
+					<td>
 						 {{ emp.pm }}
-					 </td>
-					 <td>
+					</td>
+					<td>
 						 {{ emp.rate }}
-					 </td>
-				 </tr>
+					</td>
+					<td>
+						<input type='file' class="invoice" style="width: 92px; margin: auto;" onchange="angular.element(this).scope().readURL(this, angular.element(this).scope().$index)"/>
+					</td>
+				</tr>
+			</tbody>
 	    	</table>
 	    </div>
 	</div>
