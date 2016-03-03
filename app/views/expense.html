@@ -1,5 +1,5 @@
 <div id="btn_expense">
-	<a class="btn_add red" ng-click="Show_Add_form()">Add expense</a>
+	<a class="btn_add red" ng-click="showAddForm()">Add expense</a>
 </div>
 <add-data ng-hide="showAddExpense"></add-data>
 
@@ -9,13 +9,14 @@
 	        <tr>
 				<th>Date</th>
 				<th>Purpose</th>
-				<th>Project Manager</th>
-				<th>Account(in Rs)</th>
+				<th>Project</th>
+				<th>Approver</th>
+				<th>Account (in Rs)</th>
 			</tr>
 		</table>
 		<div class="inner_table">
 	        <table>
-	             <tr ng-repeat =  "emp in data">
+	             <tr ng-repeat =  "emp in fullData | filter: { name : $root.user}">
 					 <td>
 						 {{emp.date | date : 'dd-mm-yyyy'}}
 				 	</td>
@@ -23,10 +24,13 @@
 						 {{ emp.purpose}}
 					 </td>
 					 <td>
-						 {{ emp.pm }}
+					 	{{ emp.project }}
 					 </td>
 					 <td>
-						 {{ emp.rate }}
+						{{ emp.pm }}
+					 </td>
+					 <td>
+					 	{{ emp.rate }}
 					 </td>
 				 </tr>
 	    	</table>

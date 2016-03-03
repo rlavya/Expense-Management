@@ -1,8 +1,9 @@
-myApp.controller('testExpenseController', function($scope, $state, $rootScope, $http, $parse, $timeout){
+expenseManagementApp.controller('testExpenseController', function($scope, $state, $rootScope, $http, $parse, $timeout){
 	$http.get('app/json/expense_details.json').success(function(response) {
     $rootScope.user1=response.user1[0].name;
     $rootScope.user2=response.user2[0].name;
     })
+   
 	$scope.showAddTestExpense = true;
 	$scope.reimburse = function(modelName) {
 		$rootScope.modelName = modelName;
@@ -22,8 +23,5 @@ myApp.controller('testExpenseController', function($scope, $state, $rootScope, $
 	$scope.cancel_reimburse = function() {
 		$scope.showAddTestExpense = true;
 		$('.shadow-div').removeClass('display_block');
-	};
-$( ".log_out" ).click(function() {
-    	$state.go('/');
-	});
+	};	
 });

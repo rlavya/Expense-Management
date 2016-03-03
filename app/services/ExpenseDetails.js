@@ -1,6 +1,6 @@
-myApp.factory('ExpenseDetailsService' ,['$http' ,'$q', function($http ,$q){
+expenseManagementApp.factory('ExpenseDetailsService' ,['$http' ,'$q', function($http ,$q){
     return{
-        fetchExpenseDetails: function() {
+        fetchUserDetails: function() {
             return $http.get('app/json/expense_details.json')
                     .then(
                             function(response){
