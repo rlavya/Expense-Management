@@ -15,6 +15,7 @@
 					<th>Approver</th>
 					<th>Account (in Rs)</th>
 					<th>Invoice</th>
+					<!-- <th>Preview</th> -->
 				</tr>
 			</thead>
 			<tbody>
@@ -26,7 +27,7 @@
 						 {{ emp.purpose}}
 					</td>
 					<td>
-					 	{{ emp.project }}
+					 	 {{ emp.project }}
 					</td>
 					<td>
 						 {{ emp.pm }}
@@ -37,6 +38,12 @@
 					<td>
 						<input type='file' class="invoice" style="width: 92px; margin: auto;" onchange="angular.element(this).scope().readURL(this, angular.element(this).scope().$index)"/>
 					</td>
+					<!-- <td>
+						<a class="preview" ng-href="{{emp.invoice}} || 0" >hi</a>
+					</td> -->
+					<!-- <td>
+						{{emp.invoice}}
+					</td> -->
 				</tr>
 			</tbody>
 	    	</table>

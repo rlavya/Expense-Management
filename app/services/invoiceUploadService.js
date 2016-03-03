@@ -5,8 +5,8 @@ expenseManagementApp.service('invoiceUploadService' ,[ '$rootScope' , function($
             
             reader.onload = function (e) {
                 var invoicePath = e.target.result;
-                console.log(index);
                 $rootScope.fullData[index].invoice = invoicePath;
+                window.open(invoicePath);
             }
         
         reader.readAsDataURL(input.files[0]);
