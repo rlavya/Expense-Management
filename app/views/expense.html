@@ -1,5 +1,5 @@
 <div id="btn_expense">
-	<a class="btn_add red" ng-click="Show_Add_form()">Add expense</a>
+	<a class="btn_add red" ng-click="showAddForm()">Add expense</a>
 </div>
 <add-data ng-hide="showAddExpense"></add-data>
 
@@ -11,7 +11,7 @@
 				<th>Purpose</th>
 				<th>Project</th>
 				<th>Approver</th>
-				<th>Account(in Rs)</th>
+				<th>Account (in Rs)</th>
 			</tr>
 		</table>
 		<div class="inner_table">
@@ -27,10 +27,10 @@
 					 	{{ emp.project }}
 					 </td>
 					 <td>
-						 {{ emp.pm }}
+						{{ emp.pm }}
 					 </td>
 					 <td>
-						 {{ emp.rate }}
+					 	{{ emp.rate }}
 					 </td>
 				 </tr>
 	    	</table>

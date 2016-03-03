@@ -9,21 +9,17 @@
         <select id="project" ng-model="project" ng-options="project for project in ['Bozzuto', 'ReactorOne T and M', 'BNC', 'Service forms and Dashboard','A2A','Savenia','Innolance']" ng-init="project='Bozzuto'"></select>
         <label for="pm">Approver</label>
         <select id="pm" ng-model="pm" ng-options="pm for pm in ['Nishin', 'Saju', 'Rincy', 'Vishak']" ng-init="pm='Nishin'"></select>
-        <label for="rate">Amount</label><input type="number" id="rate" ng-model="rate"><br>
+        <label for="rate">Amount</label><input type="number" id="rate" ng-model="rate" min="0"><br>
         <label for="client">Charge back to client</label>
-        
-            <div class="radio_class">
-              <input type="radio" name="client" value="yes" ng-model="client">  <label for="Yes">Yes</label>
-            </div>
-            <div class="radio_class">
-              <input type="radio" name="client" value="no" ng-model="client" style="float: left;"><label for="No" style="float: left;">No</label>
-            </div>
-        
-        
-        
+        <div class="radio_class">
+          <input type="radio" name="client" value="yes" ng-model="client">  <label for="Yes">Yes</label>
+        </div>
+        <div class="radio_class">
+          <input type="radio" name="client" value="no" ng-model="client" style="float: left;"><label for="No" style="float: left;">No</label>
+        </div>
         <div style="padding-top:10px" class="button_div">
-          <button id="submit" ng-click="SubmitAdd()">Submit</button>
-          <button id="cancel" ng-click="HideAdd()">Cancel</button>
+          <button id="submit" ng-click="submitAdd()">Submit</button>
+          <button id="cancel" ng-click="hideAdd()">Cancel</button>
         </div>
     </div>
   </form>
