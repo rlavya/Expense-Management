@@ -1,19 +1,19 @@
 <div id="btn_expense">
-	<a class="btn_add red" ng-click="Show_Add_form()">Add expense</a>
+	<a class="btn_add red" ng-click="showAddForm()">Add expense</a>
 </div>
 <add-data ng-hide="showAddExpense"></add-data>
 
 <div id="expensetable">
 	<div class="wrap">
 		<div class="inner_table">
-	        <table datatable="ng" dt-options="showCase.dtOptions" dt-column-defs="showCase.dtColumnDefs" class="row-border hover">
+	        <table datatable="ng" dt-options="showCase.dtOptions" dt-column-defs="showCase.dtColumnDefs" class="row-border hover head">
 	        <thead>	             
-				<tr class="head">
+				<tr>
 					<th>Date</th>
 					<th>Purpose</th>
 					<th>Project</th>
 					<th>Approver</th>
-					<th>Account(in Rs)</th>
+					<th>Account (in Rs)</th>
 					<th>Invoice</th>
 				</tr>
 			</thead>

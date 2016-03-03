@@ -1,4 +1,4 @@
-myApp.config(function($stateProvider, $urlRouterProvider){
+expenseManagementApp.config(function($stateProvider, $urlRouterProvider){
     $urlRouterProvider.otherwise("/")
     $stateProvider
     .state('/', {

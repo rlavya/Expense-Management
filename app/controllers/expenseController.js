@@ -1,16 +1,19 @@
-myApp.controller('expenseController', function($scope, $state, $http, ExpenseDetailsService, invoiceUploadService, $rootScope){
+expenseManagementApp.controller('expenseController', function($scope, $state, $http, ExpenseDetailsService, invoiceUploadService, $rootScope){
     $scope.showAddExpense = true;
-    $scope.Show_Add_form = function() {
-        $scope.date="";
-        $scope.purpose="";
-        $scope.pm="";
-        $scope.rate="";
+
+    $scope.showAddForm = function() {
+        $scope.date = "";
+        $scope.purpose = "";
+        $scope.pm = "";
+        $scope.rate = "";
+        $( "#datepicker" ).datepicker({ dateFormat: 'dd-mm-yy' });
         $('.add_error').hide();
         $('.shadow-div').addClass('display_block');
         $scope.showAddExpense = $scope.showAddExpense ? false : true;
     }
-    $scope.SubmitAdd = function() {
-        if ($scope.date == "" || $scope.purpose =="" || $scope.pm =="" || $scope.rate == "") {
+    $scope.submitAdd = function() {
+        $scope.date = $('#datepicker').val();
+        if ($scope.date == "" || $scope.purpose ==" " || $scope.pm == "" || $scope.rate == "") {
             $('.add_error').show();
             $('.add_error').html('Enter all details..');
             return false;
@@ -34,7 +37,7 @@ myApp.controller('expenseController', function($scope, $state, $http, ExpenseDet
             $scope.showAddExpense = $scope.showAddExpense ? false : true;
         }
     }
-    $scope.HideAdd = function() {
+    $scope.hideAdd = function() {
         $('.shadow-div').removeClass('display_block');
         $scope.showAddExpense = $scope.showAddExpense ? false : true;
     }

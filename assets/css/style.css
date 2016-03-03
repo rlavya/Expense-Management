@@ -30,7 +30,7 @@
     margin:auto;
 }
 #footer-wrapper {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
 }
@@ -144,6 +144,7 @@ table.head tr th {
 }
 #expensetable{
     padding: 40px 20% 0 17%;
+    margin-bottom: 100px;
 }
 .btn_add {
     padding: 10px;

@@ -1,4 +1,4 @@
-myApp.service('invoiceUploadService' ,[ '$rootScope' , function($rootScope){
+expenseManagementApp.service('invoiceUploadService' ,[ '$rootScope' , function($rootScope){
     this.readURL = function (input, index) {
         if (input.files && input.files[0]) {
             var reader = new FileReader();
