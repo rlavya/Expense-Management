@@ -1,4 +1,4 @@
-expenseManagementApp.controller('expenseController', function($scope, $state, $http, ExpenseDetailsService, invoiceUploadService, $rootScope){
+expenseManagementApp.controller('expenseController', function($scope, $state, $http, ExpenseDetailsService, $rootScope){
     $scope.showAddExpense = true;
 
     $scope.showAddForm = function() {
@@ -12,6 +12,7 @@ expenseManagementApp.controller('expenseController', function($scope, $state, $h
         $scope.showAddExpense = $scope.showAddExpense ? false : true;
     }
     $scope.submitAdd = function() {
+        $scope.invoice = 'No file chosen';
         $scope.date = $('#datepicker').val();
         if ($scope.date == "" || $scope.purpose ==" " || $scope.pm == "" || $scope.rate == "") {
             $('.add_error').show();
@@ -20,18 +21,16 @@ expenseManagementApp.controller('expenseController', function($scope, $state, $h
         } else {
             if( $rootScope.user == "lavya") {
                 if ($scope.pm== 'Nishin') {
-                    $rootScope.fullData.push({ 'date':$scope.date, 'purpose': $scope.purpose,'project':$scope.project, 'pm':$scope.pm, 'rate':$scope.rate, 'name' : $rootScope.user, 'status' : 0, 'invoice' : ''});
+                    $rootScope.fullData.push({ 'date':$scope.date, 'purpose': $scope.purpose,'project':$scope.project, 'pm':$scope.pm, 'rate':$scope.rate, 'name' : $rootScope.user, 'status' : 0, 'invoice' : '$scope.invoice'});
                 }else {
-                    $rootScope.fullData.push({ 'date':$scope.date, 'purpose': $scope.purpose,'project':$scope.project, 'pm':$scope.pm, 'rate':$scope.rate, 'name' : $rootScope.user, 'status' : 1, 'invoice' : ''});
+                    $rootScope.fullData.push({ 'date':$scope.date, 'purpose': $scope.purpose,'project':$scope.project, 'pm':$scope.pm, 'rate':$scope.rate, 'name' : $rootScope.user, 'status' : 1, 'invoice' : '$scope.invoice'});
                 }
-                debugger;
             }else if( $rootScope.user == "vishnu") {
                 if ($scope.pm== 'Nishin') {
-                    $rootScope.fullData.push({ 'date':$scope.date, 'purpose': $scope.purpose,'project':$scope.project, 'pm':$scope.pm, 'rate':$scope.rate, 'name' : $rootScope.user, 'status' : 0, 'invoice' : ''});
+                    $rootScope.fullData.push({ 'date':$scope.date, 'purpose': $scope.purpose,'project':$scope.project, 'pm':$scope.pm, 'rate':$scope.rate, 'name' : $rootScope.user, 'status' : 0, 'invoice' : '$scope.invoice'});
                 }else {
-                    $rootScope.fullData.push({ 'date':$scope.date, 'purpose': $scope.purpose,'project':$scope.project, 'pm':$scope.pm, 'rate':$scope.rate, 'name' : $rootScope.user, 'status' : 1, 'invoice' : ''});
+                    $rootScope.fullData.push({ 'date':$scope.date, 'purpose': $scope.purpose,'project':$scope.project, 'pm':$scope.pm, 'rate':$scope.rate, 'name' : $rootScope.user, 'status' : 1, 'invoice' : '$scope.invoice'});
                 }
-                debugger;
             }
             $('.shadow-div').removeClass('display_block');
             $scope.showAddExpense = $scope.showAddExpense ? false : true;
@@ -42,7 +41,22 @@ expenseManagementApp.controller('expenseController', function($scope, $state, $h
         $scope.showAddExpense = $scope.showAddExpense ? false : true;
     }
     $scope.readURL = function(element, index){
-        console.log(index);
-        invoiceUploadService.readURL(element, index);    
+        if (element.files && element.files[0]) {
+            var reader = new FileReader();
+            
+            reader.onload = function (e) {
+                $scope.invoice = e.target.result;
+                $scope.$apply(function() { 
+                    $rootScope.fullData[index].invoice = $scope.invoice;
+                });
+            }
+        
+        reader.readAsDataURL(element.files[0]);
+        }
+      
+        console.log($rootScope.fullData);
+    }
+    $scope.openURL = function(index){
+        window.open($rootScope.fullData[index].invoice);   
     }
 });
