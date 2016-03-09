@@ -3,8 +3,6 @@ expenseManagementApp.controller('intialiseController', function($scope, $http, $
 
 		$rootScope.fullData = [];
         ExpenseDetailsService.fetchUserDetails().then(function(response) {
-            console.log(response);
-            debugger;
             
             $rootScope.total=0;
             $rootScope.total2=0;

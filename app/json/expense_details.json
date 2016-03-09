@@ -11,7 +11,7 @@
                 "rate": 200,
                 "status": 1,
                 "total " : 0,
-                "invoice" : ""
+                "invoice" : "No file chosen"
 		    },
             {
                 "emp_id":1000,
@@ -23,7 +23,7 @@
                 "rate": 350,
                 "status": 0,
                 "total " : 0,
-                "invoice" : ""
+                "invoice" : "No file chosen"
             }
     ],
 	"user2":
@@ -38,7 +38,7 @@
             "rate": 500,
             "status": 1,
             "total2 " : 0,
-            "invoice" : ""
+            "invoice" : "No file chosen"
         },
         {
             "emp_id":1001,
@@ -50,7 +50,7 @@
             "rate": 250,
             "status": 1,
             "total2 " : 0,
-            "invoice" : ""
+            "invoice" : "No file chosen"
         }
     ]
 

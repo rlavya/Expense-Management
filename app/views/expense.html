@@ -15,7 +15,7 @@
 					<th>Approver</th>
 					<th>Account (in Rs)</th>
 					<th>Invoice</th>
-					<!-- <th>Preview</th> -->
+					<th>Preview</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -36,14 +36,12 @@
 						 {{ emp.rate }}
 					</td>
 					<td>
-						<input type='file' class="invoice" style="width: 92px; margin: auto;" onchange="angular.element(this).scope().readURL(this, angular.element(this).scope().$index)"/>
+						<input type='file' ng-model="currentImage" class="invoice" style="width: 92px; margin: auto;" onchange="angular.element(this).scope().readURL(this, angular.element(this).scope().emp)"/>
 					</td>
-					<!-- <td>
-						<a class="preview" ng-href="{{emp.invoice}} || 0" >hi</a>
-					</td> -->
-					<!-- <td>
-						{{emp.invoice}}
-					</td> -->
+					<td style="text-align: center;">
+						<a class="view_invoice" ng-hide = "emp.invoice == 'No file chosen'" ng-click="openURL(emp)" >View</a>
+						<p ng-show = "emp.invoice == 'No file chosen'" >{{ emp.invoice }}</p>
+					</td>
 				</tr>
 			</tbody>
 	    	</table>
