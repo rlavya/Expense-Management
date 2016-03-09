@@ -1,6 +1,5 @@
 expenseManagementApp.controller('expenseController', function($scope, $state, $http, ExpenseDetailsService, $rootScope, $timeout){
     $scope.showAddExpense = true;
-
     $scope.showAddForm = function() {
         $scope.date = "";
         $scope.purpose = "";
@@ -52,11 +51,8 @@ expenseManagementApp.controller('expenseController', function($scope, $state, $h
                         });
                 // });
             }
-        
         reader.readAsDataURL(element.files[0]);
         }
-      
-        console.log($rootScope.fullData);
     }
     $scope.openURL = function(curretObject){
         window.open(curretObject.invoice);   

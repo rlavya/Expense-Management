@@ -55,7 +55,6 @@ body {
     color: black;
     font-weight: 300;
 }
-
 .wrapper {
     background-color: #fff;
     position: absolute;
@@ -143,7 +142,7 @@ table.head tr th {
     overflow-x: hidden;
 }
 #expensetable{
-    padding: 4px 20% 0 17%;
+    padding: 4px 8% 0 8%;
     margin-bottom: 100px;
 }
 .btn_add {
@@ -164,23 +163,24 @@ table.head tr th {
     background-color: #FF6656;
 }
 .form_inner label{
-    width: 25%;
+    width: 20%;
     text-align: right;
 }
 .form_inner input, .form_inner select{
     width: 55%;
     margin-left: 5%;
+    margin-bottom: 2%;
 }
 .form_inner{
     width: 450px;
-    height: 340px;
+    height: 380px;
     position: absolute;
     left: 10%;
     top: 0%;
     z-index: 999;
     background-color: ghostwhite;
     text-align: center;
-    margin: 14% 15% 15% 25%;
+    margin: 10% 15% 15% 25%;
 }
 a:hover, a:focus{
     color: #fff;
