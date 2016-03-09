@@ -7,7 +7,15 @@ expenseManagementApp.controller('approveExpenseController', function($scope, $st
 		else{
 			$rootScope.fullData[index].status = 0;	
 		}
-		console.log($rootScope.fullData[index].status);
+	}
+	$scope.popup = function() {
+		$(".popup").fadeIn(500);
+		$("#overlay").fadeIn(500);
+		$(".popup textarea").val('');
+	}
+	$scope.popupClose = function() {
+		$(".popup").fadeOut(500);
+		$("#overlay").fadeOut(500);
 	}
 	$scope.openURL = function(curretObject){
         window.open(curretObject.invoice);   

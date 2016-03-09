@@ -10,6 +10,7 @@
                         <th>Amount(in Rs)</th>
                         <th>Invoice</th>
                         <th>Approve</th>
+                        <th>Notes</th>
                     </tr>
                 </thead>
             <tbody>
@@ -25,8 +26,24 @@
                     <td>
                         <input id="approve_check" type="checkbox"  ng-model="checkbox[$index]"  ng-change="approve_check($index)" ng-checked="data.status == 1">
                     </td>
+                    <td>
+                        <button ng-click="popup()">Note</button>
+                    </td>
                 </tr>
             </tbody>
+        </div>
+    </div>
+</div>
+<div id="overlay"></div>
+<div class="popup">
+    <div class="popup_inner">
+        <div>
+            <h1>Note<div ng-click="popupClose()" class="close_popup">x<div> </h1>
+            <textarea></textarea>  
+            <div style="padding-top:10px" class="button_div">
+              <button id="submit" ng-click="submitNote()">Submit</button>
+              <button id="cancel" ng-click="popupClose()">Cancel</button>
+            </div>  
         </div>
     </div>
 </div>
