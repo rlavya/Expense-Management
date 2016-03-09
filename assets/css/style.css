@@ -229,3 +229,48 @@ header p{
 .view_invoice:hover{
     color: #CB3334;
 }
+.popup{
+    position: absolute;
+    left: 50%;
+    display: none;
+    width: 400px;
+    z-index: 999;
+    bottom: 50%;
+}
+.popup_inner{
+    position: relative; 
+    left: -50%;
+    text-align: center;
+    background: #eee;
+    padding: 15px;
+}
+.popup_inner h1{
+    text-align: center;
+    margin-top: 0;
+    font-size: 32px;
+}
+.close_popup{
+    display: inline-block;
+    float: right;
+    color: #CB3334;
+    cursor: pointer;
+}
+.popup_inner h1 div{
+    font-size: 20px;
+    font-weight: bold;
+}
+#overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background: #999;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    z-index: 100;
+    display: none;
+}    
+.popup_inner textarea{
+    width: 80%;
+    margin-bottom: 10px;
+}
