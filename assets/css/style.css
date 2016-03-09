@@ -41,8 +41,8 @@
 .shadow-div {;
     display: none;
     position: absolute;
-    background-color: grey;
-    opacity: 0.3;
+    background: #999;;
+    opacity: 0.8;
     width: 100%;
     z-index: 500;
     height: 100%;
@@ -163,6 +163,7 @@ table.head tr th {
     background-color: #FF6656;
 }
 .form_inner label{
+    color: #CB3334;
     width: 20%;
     text-align: right;
 }
@@ -178,7 +179,7 @@ table.head tr th {
     left: 10%;
     top: 0%;
     z-index: 999;
-    background-color: ghostwhite;
+    background: #eee;
     text-align: center;
     margin: 10% 15% 15% 25%;
 }
@@ -211,7 +212,6 @@ header p{
     height: 230px;
 }
 .form_inner form h3{
-    color: #CB3334;
     margin-bottom: 20px;
 }
 .radio_class{
@@ -269,8 +269,12 @@ header p{
     opacity: 0.8;
     z-index: 100;
     display: none;
+    left: 0;
 }    
 .popup_inner textarea{
     width: 80%;
     margin-bottom: 10px;
+}
+.radio_class label {
+    color: black;
 }
