@@ -47,9 +47,6 @@
     z-index: 500;
     height: 100%;
 }
-.display_block {
-    display: block;
-}
 body {
     font-family: 'Source Sans Pro', sans-serif;
     color: black;
@@ -232,7 +229,6 @@ header p{
 .popup{
     position: absolute;
     left: 50%;
-    display: none;
     width: 400px;
     z-index: 999;
     bottom: 50%;
@@ -260,7 +256,7 @@ header p{
     font-size: 20px;
     font-weight: bold;
 }
-#overlay{
+.overlay{
     position: absolute;
     top: 0;
     bottom: 0;
@@ -279,4 +275,7 @@ header p{
 }
 .radio_class label {
     color: black;
+}
+.display_block {
+    display: block;
 }

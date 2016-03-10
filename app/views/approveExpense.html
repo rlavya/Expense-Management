@@ -14,7 +14,7 @@
                     </tr>
                 </thead>
             <tbody>
-                <tr ng-repeat="data in fullData" ng-show="data.pm == 'Nishin'">
+                <tr ng-repeat="data in fullData | filter : { pm : 'Nishin' } ">
                     <td>{{ data.date }}</td>
                     <td>{{ data.name }}</td>
                     <td>{{ data.purpose }}</td>
@@ -27,23 +27,11 @@
                         <input id="approve_check" type="checkbox"  ng-model="checkbox[$index]"  ng-change="approve_check($index)" ng-checked="data.status == 1">
                     </td>
                     <td>
-                        <button ng-click="popup()">Note</button>
-                        <div class="popup">
-                            <div class="popup_inner">
-                                <div>
-                                    <h1>Note<div ng-click="popupClose()" class="close_popup">x<div> </h1>
-                                    <textarea >{{data.note}}</textarea>  
-                                    <div style="padding-top:10px" class="button_div">
-                                      <button id="submit" ng-click="submitNote($index)">Submit</button>
-                                      <button id="cancel" ng-click="popupClose()">Cancel</button>
-                                    </div>  
-                                </div>
-                            </div>
-                        </div>
+                        <button ng-click="popup($index)">Note</button>
+                        <add-note ng-hide="notePopup"></add-note>
                     </td>
                 </tr>
             </tbody>
         </div>
     </div>
 </div>
-<div id="overlay"></div>
