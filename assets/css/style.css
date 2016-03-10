@@ -238,6 +238,7 @@ header p{
     bottom: 50%;
 }
 .popup_inner{
+    height: 250px;
     position: relative; 
     left: -50%;
     text-align: center;
@@ -272,6 +273,7 @@ header p{
     left: 0;
 }    
 .popup_inner textarea{
+    height: 115px;
     width: 80%;
     margin-bottom: 10px;
 }

@@ -11,11 +11,16 @@ expenseManagementApp.controller('approveExpenseController', function($scope, $st
 	$scope.popup = function() {
 		$(".popup").fadeIn(500);
 		$("#overlay").fadeIn(500);
-		$(".popup textarea").val('');
+		console.log($rootScope.fullData);
 	}
 	$scope.popupClose = function() {
 		$(".popup").fadeOut(500);
 		$("#overlay").fadeOut(500);
+	}
+	$scope.submitNote = function(index) {
+		$scope.fullData[index].note = $scope.note;
+		debugger
+		console.log($scope.fullData[index].note);
 	}
 	$scope.openURL = function(curretObject){
         window.open(curretObject.invoice);   
