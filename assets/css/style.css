@@ -298,3 +298,16 @@ header p{
 .paginate_button{
     cursor: pointer;
 }
+#details_page_inner{
+    padding: 20px;
+    /*margin: auto;*/
+    width:60%;
+}
+#details_page_inner label{
+    width: 130px;
+    padding: 0px 20px;
+    text-align: right;
+}
+#details_page_inner div{
+    padding: 5px;
+}

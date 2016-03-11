@@ -1,6 +1,8 @@
 expenseManagementApp.controller('expenseController', function($scope, $state, $http, ExpenseDetailsService, $rootScope, $timeout){
     $scope.showAddExpense = true;
     $rootScope.user = localStorage.getItem("name");
+    debugger
+    $scope.checked = true;
     $scope.showAddForm = function() {
         $scope.date = "";
         $scope.purpose = "";
