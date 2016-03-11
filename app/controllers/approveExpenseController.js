@@ -30,4 +30,9 @@ expenseManagementApp.controller('approveExpenseController', function($scope, $st
 	$scope.openURL = function(curretObject){
         window.open(curretObject.invoice);   
     }
+    $scope.test = function(data) {
+        var a = $rootScope.fullData.indexOf(data);
+        $rootScope.singleData = $rootScope.fullData[a];debugger;
+        console.log($rootScope.singleData);
+    }
 });

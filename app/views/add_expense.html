@@ -11,7 +11,7 @@ body{
         <label for="date">Date</label><input type="text" id="datepicker" ng-model="date"><br>
         <label for="purpose">Purpose</label><input type="text" id="purpose" ng-model="purpose"><br>
         <label for="project">Project</label>
-        <select id="project" ng-model="project" ng-options="project for project in ['Bozzuto', 'ReactorOne T and M', 'BNC', 'Service forms and Dashboard','A2A','Savenia','Innolance']" ng-init="project='Bozzuto'"></select>
+        <select id="project" ng-model="project" ng-options="project for project in ['Bozzuto', 'ReactorOne T and M', 'BNC', 'Service forms and Dashboard','A2A','Savenia','Innolance']"></select>
         <label for="pm">Approver</label>
         <select id="pm" ng-model="pm" ng-options="pm for pm in ['Nishin', 'Saju', 'Rincy', 'Vishak']" ng-init="pm='Nishin'"></select>
         <label for="rate" style="width: 25%; margin-right: 5%;">Amount <select style="width: 35px;" id="currency" ng-model="currency" ng-options="currency for currency in ['$', '₹', '£']" ng-init="currency='₹'"></select> </label><input style="margin-right: 5%;margin-left: 0px;" type="number" id="rate" ng-model="rate" min="0"><br>

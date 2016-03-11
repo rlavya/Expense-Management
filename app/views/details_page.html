@@ -1,3 +1,10 @@
 <div>
 	<h1>Details Page</h1>
 </div>
+<div>
+{{singleData.name}}
+	<input type='file' ng-model="currentImage" class="invoice" onchange="angular.element(this).scope().readURL(this, angular.element(this).scope().singleData)"/>
+
+	<a class="view_invoice" ng-hide = "singleData.invoice == 'No file chosen'" ng-click="openURL(singleData)" >View</a>
+	<p ng-show = "singleData.invoice == 'No file chosen'" >{{ singleData.invoice }}</p>
+</div>

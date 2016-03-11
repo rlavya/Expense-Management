@@ -19,7 +19,7 @@
 				</tr>
 			</thead>
 			<tbody>
-	            <tr ng-repeat =  "emp in fullData | filter: { name : $root.user}" ui-sref="/details_page">
+	            <tr ng-repeat =  "emp in fullData | filter: { name : $root.user}" ng-click="test(emp)" ui-sref="/details_page">
 					<td>
 						 {{emp.date | date : 'dd-mm-yyyy'}}
 				 	</td>
