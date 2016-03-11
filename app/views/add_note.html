@@ -2,7 +2,7 @@
     <div class="popup_inner">
         <div>
             <h1>Note<div ng-click="popupClose()" class="close_popup">x<div> </h1>
-            <textarea >{{data.note}}</textarea>  
+            <textarea id="note">{{note}}</textarea>  
             <div style="padding-top:10px" class="button_div">
               <button id="submit" ng-click="submitNote($index)">Submit</button>
               <button id="cancel" ng-click="popupClose()">Cancel</button>

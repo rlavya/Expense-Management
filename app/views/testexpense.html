@@ -11,19 +11,19 @@
                     <th>Project</th>
                     <th>Approver</th>
                     <th>Account (in Rs)</th>
-                    <th>Invoice</th>
+                    <!-- <th>Invoice</th> -->
                     <th>Reimbursement (in Rs)</th>
                 </tr>	
     		</thead>
             <tbody>
-                <tr ng-repeat="data in fullData | filter: { status : 1}">
+                <tr ng-repeat="data in fullData | filter: { status : 1}" ui-sref="/details_page">
                     <td>{{ data.date }}</td>
                     <td>{{ data.name }}</td>
                     <td>{{ data.purpose }}</td>
                     <td>{{ data.project }}</td>
                     <td>{{ data.pm }}</td>
                     <td>{{ data.rate }}</td>
-                    <td>{{ data.invoice }}</td>
+                    <!-- <td>{{ data.invoice }}</td> -->
                     <td style="cursor:pointer;" ng-click="reimburse('amount_reimburse')" ng-model="amount_reimburse">{{amount_reimburse}}
     				</td>
     			</tr>

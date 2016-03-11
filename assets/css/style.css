@@ -128,14 +128,18 @@ table tr td {
     border: 2px solid #eee;
     width: 100px;
     word-wrap: break-word;
+    text-align: center;
+    cursor: pointer;
 }
 table.head tr th {
     background: #eee;
     padding: 15px;
+    text-align: center;
+    cursor: pointer;
 }
 .inner_table {
     /*height: 170px;*/
-    overflow-y: auto;
+    overflow-y: hidden;
     overflow-x: hidden;
 }
 #expensetable{
@@ -160,7 +164,7 @@ table.head tr th {
     background-color: #FF6656;
 }
 .form_inner label{
-    color: #CB3334;
+    color: black;
     width: 20%;
     text-align: right;
 }
@@ -171,7 +175,7 @@ table.head tr th {
 }
 .form_inner{
     width: 450px;
-    height: 380px;
+    height: 365px;
     position: absolute;
     left: 10%;
     top: 0%;
@@ -210,6 +214,7 @@ header p{
 }
 .form_inner form h3{
     margin-bottom: 20px;
+    color: #CB3334;
 }
 .radio_class{
     display: inline-block;
@@ -278,4 +283,18 @@ header p{
 }
 .display_block {
     display: block;
+}
+.dataTables_length, .dataTables_filter, .dataTables_info, .dataTables_paginate{
+    display: inline-block;
+    margin: 0;
+}
+.dataTables_length, .dataTables_info{
+    float:left;
+    margin-bottom: 10px;
+}
+.dataTables_filter, .dataTables_paginate{
+    float:right;
+}
+.paginate_button{
+    cursor: pointer;
 }

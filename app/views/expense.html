@@ -13,13 +13,13 @@
 					<th>Purpose</th>
 					<th>Project</th>
 					<th>Approver</th>
-					<th>Account (in Rs)</th>
-					<th>Invoice</th>
-					<th>Preview</th>
+					<th>Amount (in Rs)</th>
+					<!-- <th>Invoice</th>
+					<th>Preview</th> -->
 				</tr>
 			</thead>
 			<tbody>
-	            <tr ng-repeat =  "emp in fullData | filter: { name : $root.user}">
+	            <tr ng-repeat =  "emp in fullData | filter: { name : $root.user}" ui-sref="/details_page">
 					<td>
 						 {{emp.date | date : 'dd-mm-yyyy'}}
 				 	</td>
@@ -35,13 +35,13 @@
 					<td>
 						 {{ emp.rate }}
 					</td>
-					<td>
+					<!-- <td>
 						<input type='file' ng-model="currentImage" class="invoice" style="width: 92px; margin: auto;" onchange="angular.element(this).scope().readURL(this, angular.element(this).scope().emp)"/>
 					</td>
 					<td style="text-align: center;">
 						<a class="view_invoice" ng-hide = "emp.invoice == 'No file chosen'" ng-click="openURL(emp)" >View</a>
 						<p ng-show = "emp.invoice == 'No file chosen'" >{{ emp.invoice }}</p>
-					</td>
+					</td> -->
 				</tr>
 			</tbody>
 	    	</table>

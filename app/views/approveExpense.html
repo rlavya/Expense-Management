@@ -8,28 +8,28 @@
                         <th>Name</th>
                         <th>Reason</th>
                         <th>Amount(in Rs)</th>
-                        <th>Invoice</th>
+                        <!-- <th>Invoice</th> -->
                         <th>Approve</th>
-                        <th>Notes</th>
+                        <!-- <th>Notes</th> -->
                     </tr>
                 </thead>
             <tbody>
-                <tr ng-repeat="data in fullData | filter : { pm : 'Nishin' } ">
+                <tr ng-repeat="data in fullData | filter : { pm : 'Nishin' } " ui-sref="/details_page">
                     <td>{{ data.date }}</td>
                     <td>{{ data.name }}</td>
                     <td>{{ data.purpose }}</td>
                     <td>{{ data.rate }}</td>
-                    <td>
+                    <!-- <td>
                         <a class="view_invoice" ng-hide = "data.invoice == 'No file chosen'" ng-click="openURL(data)" >View</a>
                         <p ng-show = "data.invoice == 'No file chosen'" >{{ data.invoice }}</p>
-                    </td>
+                    </td> -->
                     <td>
                         <input id="approve_check" type="checkbox"  ng-model="checkbox[$index]"  ng-change="approve_check($index)" ng-checked="data.status == 1">
                     </td>
-                    <td>
-                        <button ng-click="popup($index)">Note</button>
+                    <!-- <td>
+                        <button ng-click="popup(data)">Note</button>
                         <add-note ng-hide="notePopup"></add-note>
-                    </td>
+                    </td> -->
                 </tr>
             </tbody>
         </div>

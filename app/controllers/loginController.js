@@ -14,10 +14,12 @@ expenseManagementApp.controller('loginController', function($scope, $location, $
                 if ($scope.email == "lavya@qburst.com" && $scope.password == "lavya") {
                     
                     $rootScope.user = 'lavya';
+                    localStorage.setItem("name", "lavya");
                     $state.go('/expense');
                 }
                 else if ($scope.email == "vishnu@qburst.com" && $scope.password == "vishnu") {
                     $rootScope.user = 'vishnu';
+                    localStorage.setItem("name", "vishnu");
                     $state.go('/expense');
                 }
                 else if ($scope.email == "test@qburst.com" && $scope.password == "test") {

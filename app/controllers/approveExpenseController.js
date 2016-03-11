@@ -9,10 +9,11 @@ expenseManagementApp.controller('approveExpenseController', function($scope, $st
 			$rootScope.fullData[index].status = 0;	
 		}
 	}
-	$scope.popup = function(index) {
-		debugger;
+	$scope.popup = function(data) {
+		console.log(data.note);
 		$('.overlay').addClass('display_block');
 		$scope.notePopup = $scope.notePopup ? false : true;
+		$scope.note = data.note;
 		
 	}
 	$scope.popupClose = function() {
@@ -20,9 +21,9 @@ expenseManagementApp.controller('approveExpenseController', function($scope, $st
 		$scope.notePopup = $scope.notePopup ? false : true;
 	}
 	$scope.submitNote = function(index) {
-		$scope.fullData[index].note = $scope.noteModel;
 		debugger
-		console.log($scope.fullData[index].note);
+		$rootScope.fullData[index].note = $('#note').val();
+		console.log($rootScope.fullData);
 		$('.overlay').removeClass('display_block');
 		$scope.notePopup = $scope.notePopup ? false : true;
 	}
