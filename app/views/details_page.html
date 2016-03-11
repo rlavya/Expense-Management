@@ -1,10 +1,45 @@
-<div>
-	<h1>Details Page</h1>
-</div>
-<div>
-{{singleData.name}}
-	<input type='file' ng-model="currentImage" class="invoice" onchange="angular.element(this).scope().readURL(this, angular.element(this).scope().singleData)"/>
-
-	<a class="view_invoice" ng-hide = "singleData.invoice == 'No file chosen'" ng-click="openURL(singleData)" >View</a>
-	<p ng-show = "singleData.invoice == 'No file chosen'" >{{ singleData.invoice }}</p>
+	<div class="details_page_header">
+		<h4 style="display:inline-block;">User Name:</h4>
+		<p id="user_name"> {{singleData.name}}</p>
+	</div>
+	<div>
+		<button id="edit_button" ng-click="checked=false">Edit</button>
+	</div>
+	<div id="details_page_inner">	
+		<div>
+			<label for="">Date: </label>
+			<input type="text" ng-disabled="checked" value="{{ singleData.date}}">
+		</div>
+		<div>
+			<label for="">Purpose: </label>
+			<input type="text" ng-disabled="checked" value="{{ singleData.purpose}}">
+		</div>
+		<div>
+			<label for="">Project: </label>
+			<input type="text" ng-disabled="checked" value="{{ singleData.project}}">
+		</div>
+		<div>
+			<label for="">Approver: </label>
+			<input type="text" ng-disabled="checked" value="{{ singleData.pm}}">
+		</div>
+		<div>
+			<label for="">Amount: </label>
+			<input type="text" ng-disabled="checked" value="{{ singleData.rate}}">
+		</div>
+		<div>
+			<label for="">Invoice: </label>
+			<!-- <input type="text" ng-disabled="checked"> -->
+			<input type='file' ng-model="currentImage" class="invoice" onchange="angular.element(this).scope().readURL(this, angular.element(this).scope().singleData)"/>
+			<a class="view_invoice" ng-hide = "singleData.invoice == 'No file chosen'" ng-click="openURL(singleData)" >View</a>
+			<p ng-show = "singleData.invoice == 'No file chosen'" >{{ singleData.invoice }}</p>
+		</div>
+		<div>
+			<label for="">Note: </label>
+			<input type="text" ng-disabled="checked">
+		</div>
+		<div>
+			<label for="">History: </label>
+			<input type="text" ng-disabled="checked">
+		</div>
+	</div>
 </div>
