@@ -9,17 +9,17 @@ expenseManagementApp.controller('approveExpenseController', function($scope, $st
 			$rootScope.fullData[index].status = 0;	
 		}
 	}
-	$scope.popup = function(data) {
-		console.log(data.note);
-		$('.overlay').addClass('display_block');
-		$scope.notePopup = $scope.notePopup ? false : true;
-		$scope.note = data.note;
+	// $scope.popup = function(data) {
+	// 	console.log(data.note);
+	// 	$('.overlay').addClass('display_block');
+	// 	$scope.notePopup = $scope.notePopup ? false : true;
+	// 	$scope.note = data.note;
 		
-	}
-	$scope.popupClose = function() {
-		$('.overlay').removeClass('display_block');
-		$scope.notePopup = $scope.notePopup ? false : true;
-	}
+	// }
+	// $scope.popupClose = function() {
+	// 	$('.overlay').removeClass('display_block');
+	// 	$scope.notePopup = $scope.notePopup ? false : true;
+	// }
 	$scope.submitNote = function(index) {
 		debugger
 		$rootScope.fullData[index].note = $('#note').val();
