@@ -323,7 +323,21 @@ header p{
     color: #CB3334;
     font-size: 17px;
     padding: 8px;
+    margin-top: 10px;
 }
 #edit_button{
     float: right;
+}
+.invoice{
+    display: inline-block!important;
+    width: 30%;
+}
+.view_invoice{
+    clear: both;
+}
+.details_page_header h4, .details_page_header button{
+    margin: 20px;
+}
+.details_page_header h4{
+    margin-right: 0px;
 }
