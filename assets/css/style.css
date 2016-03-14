@@ -316,6 +316,7 @@ header p{
     float: left;
 }
 .details_page_header{
+    margin-left: 20px;
     overflow: auto;
 }
 .details_page_header p{
@@ -324,6 +325,15 @@ header p{
     font-size: 17px;
     padding: 8px;
 }
-#edit_button{
+#edit_button, #note_button{
+    margin-right: 20px;
     float: right;
+}
+.button_style {
+    margin-left: 200px;
+    margin-top: 35px;
+}
+#invoice_upload {
+    display: inline-block;
+    width: 210px;
 }
