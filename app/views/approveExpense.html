@@ -19,10 +19,6 @@
                     <td>{{ data.name }}</td>
                     <td>{{ data.purpose }}</td>
                     <td>{{ data.rate }}</td>
-                    <!-- <td>
-                        <a class="view_invoice" ng-hide = "data.invoice == 'No file chosen'" ng-click="openURL(data)" >View</a>
-                        <p ng-show = "data.invoice == 'No file chosen'" >{{ data.invoice }}</p>
-                    </td> -->
                     <td>
                         <input id="approve_check" type="checkbox"  ng-model="checkbox[$index]"  ng-change="approve_check($index)" ng-checked="data.status == 1">
                     </td>

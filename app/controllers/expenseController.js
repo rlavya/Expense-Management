@@ -1,15 +1,21 @@
 expenseManagementApp.controller('expenseController', function($scope, $state, $http, ExpenseDetailsService, $rootScope, $timeout){
     $scope.showAddExpense = true;
+    $scope.notePopup = true;
     $rootScope.user = localStorage.getItem("name");
      $scope.checked = true;
-
+     $scope.popup = function() {
+        $('.overlay').addClass('display_block');
+        $scope.notePopup = $scope.notePopup ? false : true;   
+    }
+    $scope.popupClose = function() {
+        $('.overlay').removeClass('display_block');
+        $scope.notePopup = $scope.notePopup ? false : true;
+    }
     $scope.test = function(data) {
         var a = $rootScope.fullData.indexOf(data);
         $rootScope.singleData = $rootScope.fullData[a];debugger;
         console.log($rootScope.singleData);
     }
-
-   
     $scope.showAddForm = function() {
         $scope.date = "";
         $scope.purpose = "";

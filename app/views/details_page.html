@@ -2,6 +2,8 @@
 		<h4 style="display:inline-block;">User Name:</h4>
 		<p id="user_name"> {{singleData.name}}</p>
 		<button id="edit_button" ng-click="checked=false">Edit</button>
+		<button id="note_button" ng-click="popup()">Note</button>
+		<add-note ng-hide="notePopup"></add-note>
 	</div>
 	<div id="details_page_inner">	
 		<div>
@@ -26,18 +28,15 @@
 		</div>
 		<div>
 			<label for="">Invoice: </label>
-			<!-- <input type="text" ng-disabled="checked"> -->
-			<input type='file' ng-model="currentImage" class="invoice" onchange="angular.element(this).scope().readURL(this, angular.element(this).scope().singleData)"/>
+			<input type='file' id="invoice_upload" ng-model="currentImage" class="invoice" onchange="angular.element(this).scope().readURL(this, angular.element(this).scope().singleData)"/>
 			<a class="view_invoice" ng-hide = "singleData.invoice == 'No file chosen'" ng-click="openURL(singleData)" >View</a>
 			<!-- <p ng-show = "singleData.invoice == 'No file chosen'" >{{ singleData.invoice }}</p> -->
 		</div>
-		<div>
-			<label for="">Note: </label>
-			<input type="text" ng-disabled="checked">
-		</div>
-		<div>
-			<label for="">History: </label>
-			<input type="text" ng-disabled="checked">
+		<div class="button_style">
+			<button>Submit</button>
+			<button>Cancel</button>
 		</div>
 	</div>
-</div>
+	<div class="history_wrap">
+		<label for="">History: </label>
+	</div>
