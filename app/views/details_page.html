@@ -1,8 +1,6 @@
 	<div class="details_page_header">
 		<h4 style="display:inline-block;">User Name:</h4>
 		<p id="user_name"> {{singleData.name}}</p>
-	</div>
-	<div>
 		<button id="edit_button" ng-click="checked=false">Edit</button>
 		<button id="note_button" ng-click="popup()">Note</button>
 		<add-note ng-hide="notePopup"></add-note>
@@ -34,12 +32,11 @@
 			<a class="view_invoice" ng-hide = "singleData.invoice == 'No file chosen'" ng-click="openURL(singleData)" >View</a>
 			<!-- <p ng-show = "singleData.invoice == 'No file chosen'" >{{ singleData.invoice }}</p> -->
 		</div>
-		<hr style="color: red">
-		<div>
-			<label for="">History: </label>
-		</div>
 		<div class="button_style">
 			<button>Submit</button>
 			<button>Cancel</button>
 		</div>
+	</div>
+	<div class="history_wrap">
+		<label for="">History: </label>
 	</div>
