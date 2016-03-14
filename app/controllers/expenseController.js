@@ -2,7 +2,7 @@ expenseManagementApp.controller('expenseController', function($scope, $state, $h
     $scope.showAddExpense = true;
     $scope.notePopup = true;
     $rootScope.user = localStorage.getItem("name");
-     $scope.checked = true;
+    $scope.checked = true;
      $scope.popup = function() {
         $('.overlay').addClass('display_block');
         $scope.notePopup = $scope.notePopup ? false : true;   
@@ -12,9 +12,24 @@ expenseManagementApp.controller('expenseController', function($scope, $state, $h
         $scope.notePopup = $scope.notePopup ? false : true;
     }
     $scope.test = function(data) {
-        var a = $rootScope.fullData.indexOf(data);
-        $rootScope.singleData = $rootScope.fullData[a];debugger;
-        console.log($rootScope.singleData);
+        $rootScope.a = $rootScope.fullData.indexOf(data);
+        $rootScope.singleData = $rootScope.fullData[$rootScope.a];
+    }
+    $scope.submitNote = function() {
+        // a = $rootScope.a;
+        $scope.note_model = $('#note').val();
+        $rootScope.fullData[$rootScope.a].note_array.push({ 'note':$scope.note_model});
+        $rootScope.singleData = $rootScope.fullData[$rootScope.a];
+        $scope.popupClose();
+    }
+    $scope.submit_detailpage = function() {
+        if ($scope.pm_detailpage == 'Nishin') {
+            $rootScope.fullData[$rootScope.a] = { 'date':$scope.date_detailpage, 'purpose': $scope.purpose_detailpage,'project':$scope.project_detailpage, 'pm':$scope.pm_detailpage, 'rate':$scope.rate_detailpage, 'name' : $rootScope.singleData.name, 'status' : 0,  'note' : 'No note added'};
+        }else {
+            $rootScope.fullData[$rootScope.a] = { 'date':$scope.date_detailpage, 'purpose': $scope.purpose_detailpage,'project':$scope.project_detailpage, 'pm':$scope.pm_detailpage, 'rate':$scope.rate_detailpage, 'name' : $rootScope.singleData.name, 'status' : 1, 'note' : 'No note added'};
+        }
+        console.log($rootScope.fullData);
+
     }
     $scope.showAddForm = function() {
         $scope.date = "";

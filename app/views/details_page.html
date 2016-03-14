@@ -2,29 +2,29 @@
 		<h4 style="display:inline-block;">User Name:</h4>
 		<p id="user_name"> {{singleData.name}}</p>
 		<button id="edit_button" ng-click="checked=false">Edit</button>
-		<button id="note_button" ng-click="popup()">Note</button>
+		<button id="note_button" ng-model="noteHistory" ng-click="popup()">Note</button>
 		<add-note ng-hide="notePopup"></add-note>
 	</div>
 	<div id="details_page_inner">	
 		<div>
 			<label for="">Date: </label>
-			<input type="text" ng-disabled="checked" value="{{ singleData.date}}">
+			<input type="text" ng-disabled="checked" ng-value="{{ 'singleData.date' }}" ng-model="date_detailpage">
 		</div>
 		<div>
 			<label for="">Purpose: </label>
-			<input type="text" ng-disabled="checked" value="{{ singleData.purpose}}">
+			<input type="text" ng-disabled="checked" ng-value="{{ 'singleData.purpose' }}" ng-model="purpose_detailpage">
 		</div>
 		<div>
 			<label for="">Project: </label>
-			<input type="text" ng-disabled="checked" value="{{ singleData.project}}">
+			<input type="text" ng-disabled="checked" ng-value="{{ 'singleData.project' }}" ng-model="project_detailpage">
 		</div>
 		<div>
 			<label for="">Approver: </label>
-			<input type="text" ng-disabled="checked" value="{{ singleData.pm}}">
+			<input type="text" ng-disabled="checked" ng-value="{{ 'singleData.pm'}}" ng-model="pm_detailpage">
 		</div>
 		<div>
 			<label for="">Amount: </label>
-			<input type="text" ng-disabled="checked" value="{{ singleData.rate}}">
+			<input type="text" ng-disabled="checked" ng-value="{{ singleData.rate }}" ng-model="rate_detailpage">
 		</div>
 		<div>
 			<label for="">Invoice: </label>
@@ -33,10 +33,16 @@
 			<!-- <p ng-show = "singleData.invoice == 'No file chosen'" >{{ singleData.invoice }}</p> -->
 		</div>
 		<div class="button_style">
-			<button>Submit</button>
+			<button ng-click="submit_detailpage()">Submit</button>
 			<button>Cancel</button>
 		</div>
 	</div>
 	<div class="history_wrap">
 		<label for="">History: </label>
+		<section>
+			<div ng-repeat="notes in singleData.note_array">
+				<li>{{ notes.note }}</li>
+				
+			</div>			
+		</section>
 	</div>
