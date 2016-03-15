@@ -31,7 +31,7 @@ expenseManagementApp.controller('approveExpenseController', function($scope, $st
         window.open(curretObject.invoice);   
     }
     $scope.test = function(data) {
-        var a = $rootScope.fullData.indexOf(data);
-        $rootScope.singleData = $rootScope.fullData[a];debugger;
+        $rootScope.a = $rootScope.fullData.indexOf(data);
+        $rootScope.singleData = $rootScope.fullData[$rootScope.a];debugger;
     }
 });

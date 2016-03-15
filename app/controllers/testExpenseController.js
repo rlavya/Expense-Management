@@ -25,8 +25,8 @@ expenseManagementApp.controller('testExpenseController', function($scope, $state
 		$('.shadow-div').removeClass('display_block');
 	};	
 	$scope.test = function(data) {
-        var a = $rootScope.fullData.indexOf(data);
-        $rootScope.singleData = $rootScope.fullData[a];debugger;
+        $rootScope.a = $rootScope.fullData.indexOf(data);
+        $rootScope.singleData = $rootScope.fullData[$rootScope.a];debugger;
         console.log($rootScope.singleData);
     }
 });
