@@ -25,7 +25,8 @@ expenseManagementApp.controller('expenseController', function($scope, $state, $h
     }
     $scope.submit_detailpage = function() {
         $scope.checked = true;
-        debugger
+        $scope.singleData.date = $('#date_detail').val();
+        debugger;
             if ($scope.singleData.pm == 'Nishin') {
                 $rootScope.fullData[$rootScope.a] = $scope.singleData;
             }else {
@@ -33,6 +34,10 @@ expenseManagementApp.controller('expenseController', function($scope, $state, $h
             }
             console.log($rootScope.fullData);
 
+    }
+    $scope.edit_click = function() {
+        $( "#date_detail" ).datepicker({ dateFormat: 'dd-mm-yy' });
+        $scope.checked = false;
     }
     $scope.showAddForm = function() {
         $scope.date = "";
