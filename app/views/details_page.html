@@ -40,9 +40,8 @@
 	<div class="history_wrap">
 		<label for="">History: </label>
 		<section>
-			<div ng-repeat="notes in singleData.note_array">
-				<li>{{ notes.note }}</li>
-				
-			</div>			
+			<ul ng-repeat="notes in singleData.note_array">
+				<li>{{ notes.note }}<p ng-hide = " notes.note != '' ">No history to display.</p></li>
+			</ul>			
 		</section>
 	</div>

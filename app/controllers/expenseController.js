@@ -12,20 +12,19 @@ expenseManagementApp.controller('expenseController', function($scope, $state, $h
         $scope.notePopup = $scope.notePopup ? false : true;
     }
     $scope.test = function(data) {
-        $rootScope.a = $rootScope.fullData.indexOf(data);debugger
+        $rootScope.a = $rootScope.fullData.indexOf(data);
         $rootScope.singleData = $rootScope.fullData[$rootScope.a];
+        debugger
     }
     $scope.submitNote = function() {
         // a = $rootScope.a;
         $scope.note_model = $('#note').val();
-        debugger
         $rootScope.fullData[$rootScope.a].note_array.push({ 'note':$scope.note_model});
         $rootScope.singleData = $rootScope.fullData[$rootScope.a];
         $scope.popupClose();
     }
     $scope.submit_detailpage = function() {
         $scope.checked = true;
-        debugger
             if ($scope.singleData.pm == 'Nishin') {
                 $rootScope.fullData[$rootScope.a] = $scope.singleData;
             }else {
@@ -54,15 +53,15 @@ expenseManagementApp.controller('expenseController', function($scope, $state, $h
         } else {
             if( $rootScope.user == "lavya") {
                 if ($scope.pm== 'Nishin') {
-                    $rootScope.fullData.push({ 'date':$scope.date, 'purpose': $scope.purpose,'project':$scope.project, 'pm':$scope.pm, 'rate':$scope.rate, 'name' : $rootScope.user, 'status' : 0, 'invoice' : $scope.invoice, 'note' : 'No note added'});
+                    $rootScope.fullData.push({ 'date':$scope.date, 'purpose': $scope.purpose,'project':$scope.project, 'pm':$scope.pm, 'rate':$scope.rate, 'name' : $rootScope.user, 'status' : 0, 'invoice' : $scope.invoice, 'note_array' : [{"note" :""}]});
                 }else {
-                    $rootScope.fullData.push({ 'date':$scope.date, 'purpose': $scope.purpose,'project':$scope.project, 'pm':$scope.pm, 'rate':$scope.rate, 'name' : $rootScope.user, 'status' : 1, 'invoice' : $scope.invoice, 'note' : 'No note added'});
+                    $rootScope.fullData.push({ 'date':$scope.date, 'purpose': $scope.purpose,'project':$scope.project, 'pm':$scope.pm, 'rate':$scope.rate, 'name' : $rootScope.user, 'status' : 1, 'invoice' : $scope.invoice, 'note_array' : [{"note" :""}]});
                 }
             }else if( $rootScope.user == "vishnu") {
                 if ($scope.pm== 'Nishin') {
-                    $rootScope.fullData.push({ 'date':$scope.date, 'purpose': $scope.purpose,'project':$scope.project, 'pm':$scope.pm, 'rate':$scope.rate, 'name' : $rootScope.user, 'status' : 0, 'invoice' : $scope.invoice, 'note' : 'No note added'});
+                    $rootScope.fullData.push({ 'date':$scope.date, 'purpose': $scope.purpose,'project':$scope.project, 'pm':$scope.pm, 'rate':$scope.rate, 'name' : $rootScope.user, 'status' : 0, 'invoice' : $scope.invoice, 'note_array' : [{"note" :""}]});
                 }else {
-                    $rootScope.fullData.push({ 'date':$scope.date, 'purpose': $scope.purpose,'project':$scope.project, 'pm':$scope.pm, 'rate':$scope.rate, 'name' : $rootScope.user, 'status' : 1, 'invoice' : $scope.invoice, 'note' : 'No note added'});
+                    $rootScope.fullData.push({ 'date':$scope.date, 'purpose': $scope.purpose,'project':$scope.project, 'pm':$scope.pm, 'rate':$scope.rate, 'name' : $rootScope.user, 'status' : 1, 'invoice' : $scope.invoice, 'note_array' : [{"note" :""}]});
                 }
             }
             $('.shadow-div').removeClass('display_block');
