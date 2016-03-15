@@ -11,7 +11,13 @@
                 "rate": 200,
                 "status": 1,
                 "total " : 0,
-                "invoice" : ""
+                "invoice" : "No file chosen",
+                "note_array" :
+                [
+                    {
+                        "note" : "Cab expense for the month of January."
+                    }
+                ]
 		    },
             {
                 "emp_id":1000,
@@ -23,7 +29,13 @@
                 "rate": 350,
                 "status": 0,
                 "total " : 0,
-                "invoice" : ""
+                "invoice" : "No file chosen",
+                "note_array" : 
+                [
+                    {
+                        "note" :"Bus expense for the trip."
+                    }
+                ]
             }
     ],
 	"user2":
@@ -38,7 +50,13 @@
             "rate": 500,
             "status": 1,
             "total2 " : 0,
-            "invoice" : ""
+            "invoice" : "No file chosen",
+            "note_array" : 
+            [
+                {
+                    "note" : "Taxi fare from kazhakootam to thampanoor."
+                }
+            ]
         },
         {
             "emp_id":1001,
@@ -50,7 +68,16 @@
             "rate": 250,
             "status": 1,
             "total2 " : 0,
-            "invoice" : ""
+            "invoice" : "No file chosen",
+            "note_array" : 
+            [
+                {
+                    "note" : "Auto fare from vazhuthacaud office to Phase 3."
+                },
+                {
+                    "note" : "For project purpose"
+                }
+            ]
         }
     ]
 

@@ -41,21 +41,17 @@
 .shadow-div {;
     display: none;
     position: absolute;
-    background-color: grey;
-    opacity: 0.3;
+    background: #999;;
+    opacity: 0.8;
     width: 100%;
     z-index: 500;
     height: 100%;
-}
-.display_block {
-    display: block;
 }
 body {
     font-family: 'Source Sans Pro', sans-serif;
     color: black;
     font-weight: 300;
 }
-
 .wrapper {
     background-color: #fff;
     position: absolute;
@@ -121,7 +117,7 @@ body {
             transition-duration: 0.25s;
 }
 #btn_expense, #btn_testexpense {
-    margin: 10px;
+    margin: 10px 10px 0px 10px;
 }
 .wrap table {
     width: 100%;
@@ -132,18 +128,22 @@ table tr td {
     border: 2px solid #eee;
     width: 100px;
     word-wrap: break-word;
+    text-align: center;
+    cursor: pointer;
 }
 table.head tr th {
     background: #eee;
     padding: 15px;
+    text-align: center;
+    cursor: pointer;
 }
 .inner_table {
     /*height: 170px;*/
-    overflow-y: auto;
+    overflow-y: hidden;
     overflow-x: hidden;
 }
 #expensetable{
-    padding: 40px 20% 0 17%;
+    padding: 4px 8% 0 8%;
     margin-bottom: 100px;
 }
 .btn_add {
@@ -164,23 +164,25 @@ table.head tr th {
     background-color: #FF6656;
 }
 .form_inner label{
-    width: 25%;
+    color: black;
+    width: 20%;
     text-align: right;
 }
 .form_inner input, .form_inner select{
     width: 55%;
     margin-left: 5%;
+    margin-bottom: 2%;
 }
 .form_inner{
     width: 450px;
-    height: 340px;
+    height: 365px;
     position: absolute;
     left: 10%;
     top: 0%;
     z-index: 999;
-    background-color: ghostwhite;
+    background: #eee;
     text-align: center;
-    margin: 14% 15% 15% 25%;
+    margin: 10% 15% 15% 25%;
 }
 a:hover, a:focus{
     color: #fff;
@@ -211,8 +213,8 @@ header p{
     height: 230px;
 }
 .form_inner form h3{
-    color: #CB3334;
     margin-bottom: 20px;
+    color: #CB3334;
 }
 .radio_class{
     display: inline-block;
@@ -221,4 +223,143 @@ header p{
 }
 .radio_class input[name = "client"] {
     width: 14px;
+}
+.view_invoice{
+    color: #CB3334;
+    cursor: pointer;
+}
+.view_invoice:hover{
+    color: #CB3334;
+}
+.popup{
+    position: absolute;
+    left: 50%;
+    width: 400px;
+    z-index: 999;
+    bottom: 50%;
+}
+.popup_inner{
+    height: 250px;
+    position: relative; 
+    left: -50%;
+    text-align: center;
+    background: #eee;
+    padding: 15px;
+}
+.popup_inner h1{
+    text-align: center;
+    margin-top: 0;
+    font-size: 32px;
+}
+.close_popup{
+    display: inline-block;
+    float: right;
+    color: #CB3334;
+    cursor: pointer;
+}
+.popup_inner h1 div{
+    font-size: 20px;
+    font-weight: bold;
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background: #999;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    z-index: 100;
+    display: none;
+    left: 0;
+}    
+.popup_inner textarea{
+    height: 115px;
+    width: 80%;
+    margin-bottom: 10px;
+}
+.radio_class label {
+    color: black;
+}
+.display_block {
+    display: block;
+}
+.dataTables_length, .dataTables_filter, .dataTables_info, .dataTables_paginate{
+    display: inline-block;
+    margin: 0;
+}
+.dataTables_length, .dataTables_info{
+    float:left;
+    margin-bottom: 10px;
+}
+.dataTables_filter, .dataTables_paginate{
+    float:right;
+}
+.paginate_button{
+    cursor: pointer;
+}
+#details_page_inner{
+    padding: 20px;
+    margin: auto;
+    width:60%;
+}
+#details_page_inner label{
+    width: 130px;
+    padding: 0px 20px;
+    text-align: right;
+}
+#details_page_inner div{
+    padding: 5px;
+}
+.details_page_header h4, .details_page_header p{
+    display: inline-block;
+    float: left;
+}
+.details_page_header{
+    margin-left: 20px;
+    overflow: auto;
+}
+.details_page_header p{
+    vertical-align: middle;
+    color: #CB3334;
+    font-size: 17px;
+    padding: 8px;
+    margin-top: 10px;
+}
+#edit_button{
+    margin-right: 20px;
+    float: right;
+}
+.invoice{
+    display: inline-block!important;
+    width: 30%;
+}
+.view_invoice{
+    clear: both;
+}
+.details_page_header h4, .details_page_header button{
+    margin: 20px;
+}
+.details_page_header h4{
+    margin-right: 0px;
+}
+#details_page_inner .button_style {
+    text-align: center;
+    width: 100%;
+    padding-top: 20px;
+    padding-right: 40%;
+}
+.button_style button{
+    margin: 10px;
+}
+#invoice_upload {
+    display: inline-block;
+    width: 210px;
+}
+.history_wrap{
+    margin-left: 40px;
+}
+#note_button{
+    margin-right: 0px;
+    float: right;
 }

@@ -1,7 +1,7 @@
 expenseManagementApp.controller('testExpenseController', function($scope, $state, $rootScope, $http, $parse, $timeout){
 	$http.get('app/json/expense_details.json').success(function(response) {
-    $rootScope.user1=response.user1[0].name;
-    $rootScope.user2=response.user2[0].name;
+	    $rootScope.user1=response.user1[0].name;
+	    $rootScope.user2=response.user2[0].name;
     })
    
 	$scope.showAddTestExpense = true;
@@ -24,4 +24,9 @@ expenseManagementApp.controller('testExpenseController', function($scope, $state
 		$scope.showAddTestExpense = true;
 		$('.shadow-div').removeClass('display_block');
 	};	
+	$scope.test = function(data) {
+        $rootScope.a = $rootScope.fullData.indexOf(data);
+        $rootScope.singleData = $rootScope.fullData[$rootScope.a];debugger;
+        console.log($rootScope.singleData);
+    }
 });
