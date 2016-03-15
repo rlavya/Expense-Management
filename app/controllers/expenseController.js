@@ -2,6 +2,7 @@ expenseManagementApp.controller('expenseController', function($scope, $state, $h
     $scope.showAddExpense = true;
     $scope.notePopup = true;
     $rootScope.user = localStorage.getItem("name");
+    $rootScope.user_type = localStorage.getItem("user_type");
     $scope.checked = true;
      $scope.popup = function() {
         $('.overlay').addClass('display_block');

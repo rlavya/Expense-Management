@@ -32,15 +32,19 @@
 			<a class="view_invoice" ng-hide = "singleData.invoice == 'No file chosen'" ng-click="openURL(singleData)" >View</a>
 		</div>
 		<div class="button_style">
-			<button ng-click="submit_detailpage()">Submit</button>
-			<button>Cancel</button>
+			<button ng-click="submit_detailpage()" ui-sref="/expense" ng-show="$root.user_type == 'user'">Submit</button>
+			<button ng-click="submit_detailpage()" ui-sref="/testexpense" ng-show="$root.user_type == 'admin'">Submit</button>
+			<button ng-click="submit_detailpage()" ui-sref="/approverexpense" ng-show="$root.user_type == 'approver'">Submit</button>
+			<button ui-sref="/expense" ng-show="$root.user_type == 'user'">Cancel</button>
+			<button ui-sref="/testexpense" ng-show="$root.user_type == 'admin'">Cancel</button>
+			<button ui-sref="/approverexpense" ng-show="$root.user_type == 'approver'">Cancel</button>
 		</div>
 	</div>
 	<div class="history_wrap">
 		<label for="">History: </label>
 		<section>
 			<ul ng-repeat="notes in singleData.note_array">
-				<li>{{ notes.note }}<p ng-hide = " notes.note != '' ">No history to display.</p></li>
+				<li>{{ notes.note }}</li>
 			</ul>			
 		</section>
 	</div>

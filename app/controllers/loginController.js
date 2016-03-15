@@ -15,11 +15,13 @@ expenseManagementApp.controller('loginController', function($scope, $location, $
                     
                     $rootScope.user = 'lavya';
                     localStorage.setItem("name", "lavya");
+                    localStorage.setItem("user_type", "user");
                     $state.go('/expense');
                 }
                 else if ($scope.email == "vishnu@qburst.com" && $scope.password == "vishnu") {
                     $rootScope.user = 'vishnu';
                     localStorage.setItem("name", "vishnu");
+                    localStorage.setItem("user_type", "user");
                     $state.go('/expense');
                 }
                 else if ($scope.email == "test@qburst.com" && $scope.password == "test") {
@@ -36,9 +38,11 @@ expenseManagementApp.controller('loginController', function($scope, $location, $
                             }
                         };
                     };
+                    localStorage.setItem("user_type", "admin");
                     $state.go('/testexpense');
                 }
                 else if ($scope.email == "nishin@qburst.com" && $scope.password == "nishin") {
+                    localStorage.setItem("user_type", "approver");
                     $state.go('/approverexpense');
                 }
                 else {
