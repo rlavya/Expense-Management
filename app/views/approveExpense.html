@@ -10,22 +10,21 @@
                         <th>Amount(in Rs)</th>
                         <!-- <th>Invoice</th> -->
                         <th>Approve</th>
-                        <!-- <th>Notes</th> -->
                     </tr>
                 </thead>
             <tbody>
-                <tr ng-repeat="data in fullData | filter : { pm : 'Nishin' } " ui-sref="/details_page" ng-click="test(data)">
-                    <td>{{ data.date }}</td>
-                    <td>{{ data.name }}</td>
-                    <td>{{ data.purpose }}</td>
-                    <td>{{ data.rate }}</td>
+                <tr ng-repeat="data in fullData | filter : { pm : 'Nishin' } " ng-click="test(data)">
+                    <td ui-sref="/details_page">{{ data.date }}</td>
+                    <td ui-sref="/details_page">{{ data.name }}</td>
+                    <td ui-sref="/details_page">{{ data.purpose }}</td>
+                    <td ui-sref="/details_page">{{ data.rate }}</td>
                     <td>
-                        <input id="approve_check" type="checkbox"  ng-model="checkbox[$index]"  ng-change="approve_check($index)" ng-checked="data.status == 1">
+                        <!-- <input id="approve_check" type="checkbox"  ng-model="checkbox[$index]"  ng-change="approve_check($index)" ng-checked="data.status == 1"> -->
+                        <select name="repeatSelect" id="repeatSelect" ng-model="approve.repeatSelect">
+                            <option ng-repeat="approver_status in approve"> {{approver_status.val}} </option>
+                        </select>
+                        <button ng-click="approve_check(data)">Confirm</button>
                     </td>
-                    <!-- <td>
-                        <button ng-click="popup(data)">Note</button>
-                        <add-note ng-hide="notePopup"></add-note>
-                    </td> -->
                 </tr>
             </tbody>
         </div>

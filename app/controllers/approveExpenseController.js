@@ -1,25 +1,20 @@
 expenseManagementApp.controller('approveExpenseController', function($scope, $state, $http, $rootScope){
 	$scope.checkbox = [];
 	$scope.notePopup = true;
-	$scope.approve_check = function(index, event) {
-		if ($scope.checkbox[index] == true) {
-			$rootScope.fullData[index].status = 1;
+	$scope.approve = [
+		{val: 'Approve'}, 
+		{val: 'Deny'}, 
+		{val: 'More Details'}
+	];
+	$scope.approve_check = function(data, event) {
+		$rootScope.approveindex = $rootScope.fullData.indexOf(data);
+		if ($scope.approve.repeatSelect == ' Approve ') {
+			$rootScope.fullData[$rootScope.approveindex].status = 1;
 		}
 		else{
-			$rootScope.fullData[index].status = 0;	
+			$rootScope.fullData[$rootScope.approveindex].status = 0;	
 		}
 	}
-	// $scope.popup = function(data) {
-	// 	console.log(data.note);
-	// 	$('.overlay').addClass('display_block');
-	// 	$scope.notePopup = $scope.notePopup ? false : true;
-	// 	$scope.note = data.note;
-		
-	// }
-	// $scope.popupClose = function() {
-	// 	$('.overlay').removeClass('display_block');
-	// 	$scope.notePopup = $scope.notePopup ? false : true;
-	// }
 	$scope.submitNote = function(index) {
 		debugger
 		$rootScope.fullData[index].note = $('#note').val();
@@ -32,6 +27,6 @@ expenseManagementApp.controller('approveExpenseController', function($scope, $st
     }
     $scope.test = function(data) {
         $rootScope.a = $rootScope.fullData.indexOf(data);
-        $rootScope.singleData = $rootScope.fullData[$rootScope.a];debugger;
+        $rootScope.singleData = $rootScope.fullData[$rootScope.a];
     }
 });
