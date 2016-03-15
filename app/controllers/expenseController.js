@@ -15,10 +15,8 @@ expenseManagementApp.controller('expenseController', function($scope, $state, $h
     $scope.test = function(data) {
         $rootScope.a = $rootScope.fullData.indexOf(data);
         $rootScope.singleData = $rootScope.fullData[$rootScope.a];
-        debugger
     }
     $scope.submitNote = function() {
-        // a = $rootScope.a;
         $scope.note_model = $('#note').val();
         $rootScope.fullData[$rootScope.a].note_array.push({ 'note':$scope.note_model});
         $rootScope.singleData = $rootScope.fullData[$rootScope.a];
@@ -27,14 +25,11 @@ expenseManagementApp.controller('expenseController', function($scope, $state, $h
     $scope.submit_detailpage = function() {
         $scope.checked = true;
         $scope.singleData.date = $('#date_detail').val();
-        debugger;
-            if ($scope.singleData.pm == 'Nishin') {
-                $rootScope.fullData[$rootScope.a] = $scope.singleData;
-            }else {
-                $rootScope.fullData[$rootScope.a] = $scope.singleData;
-            }
-            console.log($rootScope.fullData);
-
+        if ($scope.singleData.pm == 'Nishin') {
+            $rootScope.fullData[$rootScope.a] = $scope.singleData;
+        }else {
+            $rootScope.fullData[$rootScope.a] = $scope.singleData;
+        }
     }
     $scope.edit_click = function() {
         $( "#date_detail" ).datepicker({ dateFormat: 'dd-mm-yy' });
@@ -94,7 +89,7 @@ expenseManagementApp.controller('expenseController', function($scope, $state, $h
         reader.readAsDataURL(element.files[0]);
         }
     }
-    $scope.openURL = function(curretObject){
+    $scope.openURL = function(curretObject) {
         window.open(curretObject.invoice);   
     }
 });

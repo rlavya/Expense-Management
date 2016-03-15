@@ -358,8 +358,17 @@ header p{
 }
 .history_wrap{
     margin-left: 40px;
+    margin-right: 40px;
 }
 #note_button{
     margin-right: 0px;
     float: right;
+}
+.notes_container{
+    max-height: 80px;
+    overflow: auto;
+    margin-bottom: 150px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    padding: 10px;
 }

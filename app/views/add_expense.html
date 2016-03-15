@@ -15,7 +15,6 @@ body{
         <label for="pm">Approver</label>
         <select id="pm" ng-model="pm" ng-options="pm for pm in ['Nishin', 'Saju', 'Rincy', 'Vishak']" ng-init="pm='Nishin'"></select>
         <label for="rate" style="width: 25%; margin-right: 5%;">Amount <select style="width: 35px;" id="currency" ng-model="currency" ng-options="currency for currency in ['$', '₹', '£']" ng-init="currency='₹'"></select> </label><input style="margin-right: 5%;margin-left: 0px;" type="number" id="rate" ng-model="rate" min="0"><br>
-        <!-- <label for="client">Charge back to client</label> -->
         <label for="client" title="Charge back to client">CBTC</label>
         <div class="radio_class">
           <input type="radio" name="client" value="yes" ng-model="client">  <label for="Yes">Yes</label>

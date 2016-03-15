@@ -16,13 +16,13 @@
                 </tr>	
     		</thead>
             <tbody>
-                <tr ng-repeat="data in fullData | filter: { status : 1}" ui-sref="/details_page" ng-click="test(data)">
-                    <td>{{ data.date }}</td>
-                    <td>{{ data.name }}</td>
-                    <td>{{ data.purpose }}</td>
-                    <td>{{ data.project }}</td>
-                    <td>{{ data.pm }}</td>
-                    <td>{{ data.rate }}</td>
+                <tr ng-repeat="data in fullData | filter: { status : 1}" ng-click="test(data)">
+                    <td ui-sref="/details_page">{{ data.date }}</td>
+                    <td ui-sref="/details_page">{{ data.name }}</td>
+                    <td ui-sref="/details_page">{{ data.purpose }}</td>
+                    <td ui-sref="/details_page">{{ data.project }}</td>
+                    <td ui-sref="/details_page">{{ data.pm }}</td>
+                    <td ui-sref="/details_page">{{ data.rate }}</td>
                     <!-- <td>{{ data.invoice }}</td> -->
                     <td style="cursor:pointer;" ng-click="reimburse('amount_reimburse')" ng-model="amount_reimburse">{{amount_reimburse}}
     				</td>

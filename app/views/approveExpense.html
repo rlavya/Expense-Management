@@ -19,11 +19,15 @@
                     <td ui-sref="/details_page">{{ data.purpose }}</td>
                     <td ui-sref="/details_page">{{ data.rate }}</td>
                     <td>
-                        <!-- <input id="approve_check" type="checkbox"  ng-model="checkbox[$index]"  ng-change="approve_check($index)" ng-checked="data.status == 1"> -->
-                        <select name="repeatSelect" id="repeatSelect" ng-model="approve.repeatSelect">
-                            <option ng-repeat="approver_status in approve"> {{approver_status.val}} </option>
-                        </select>
-                        <button ng-click="approve_check(data)">Confirm</button>
+                        <div ng-show="indexArray[$index] != true">
+                            <select ng-model="approve.repeatSelect[$index]">
+                                <option ng-repeat="approver_status in approve"> {{approver_status.val}} </option>
+                            </select>
+                            <button ng-click="approve_check(data, $index)">Confirm</button>
+                        </div>
+                        <div ng-show="indexArray[$index] == true">
+                            {{approve.repeatSelect[$index]}}
+                        </div>   
                     </td>
                 </tr>
             </tbody>
