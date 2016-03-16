@@ -33,7 +33,4 @@ expenseManagementApp.controller('approveExpenseController', function($scope, $st
         $rootScope.a = $rootScope.fullData.indexOf(data);
         $rootScope.singleData = $rootScope.fullData[$rootScope.a];
     }
-    $scope.changeShow = function(index){
-	 
-	}
 });

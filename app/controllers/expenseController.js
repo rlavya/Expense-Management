@@ -55,15 +55,15 @@ expenseManagementApp.controller('expenseController', function($scope, $state, $h
         } else {
             if( $rootScope.user == "lavya") {
                 if ($scope.pm== 'Nishin') {
-                    $rootScope.fullData.push({ 'date':$scope.date, 'purpose': $scope.purpose,'project':$scope.project, 'pm':$scope.pm, 'rate':$scope.rate, 'name' : $rootScope.user, 'status' : 0, 'invoice' : $scope.invoice, 'note_array' : [{"note" :""}]});
+                    $rootScope.fullData.push({ 'date':$scope.date, 'purpose': $scope.purpose,'project':$scope.project, 'pm':$scope.pm, 'rate':$scope.rate, 'name' : $rootScope.user, 'status' : 0, 'reimburse' : '', 'invoice' : $scope.invoice, 'note_array' : [{"note" :""}]});
                 }else {
-                    $rootScope.fullData.push({ 'date':$scope.date, 'purpose': $scope.purpose,'project':$scope.project, 'pm':$scope.pm, 'rate':$scope.rate, 'name' : $rootScope.user, 'status' : 1, 'invoice' : $scope.invoice, 'note_array' : [{"note" :""}]});
+                    $rootScope.fullData.push({ 'date':$scope.date, 'purpose': $scope.purpose,'project':$scope.project, 'pm':$scope.pm, 'rate':$scope.rate, 'name' : $rootScope.user, 'status' : 1, 'reimburse' : '', 'invoice' : $scope.invoice, 'note_array' : [{"note" :""}]});
                 }
             }else if( $rootScope.user == "vishnu") {
                 if ($scope.pm== 'Nishin') {
-                    $rootScope.fullData.push({ 'date':$scope.date, 'purpose': $scope.purpose,'project':$scope.project, 'pm':$scope.pm, 'rate':$scope.rate, 'name' : $rootScope.user, 'status' : 0, 'invoice' : $scope.invoice, 'note_array' : [{"note" :""}]});
+                    $rootScope.fullData.push({ 'date':$scope.date, 'purpose': $scope.purpose,'project':$scope.project, 'pm':$scope.pm, 'rate':$scope.rate, 'name' : $rootScope.user, 'status' : 0, 'reimburse' : '', 'invoice' : $scope.invoice, 'note_array' : [{"note" :""}]});
                 }else {
-                    $rootScope.fullData.push({ 'date':$scope.date, 'purpose': $scope.purpose,'project':$scope.project, 'pm':$scope.pm, 'rate':$scope.rate, 'name' : $rootScope.user, 'status' : 1, 'invoice' : $scope.invoice, 'note_array' : [{"note" :""}]});
+                    $rootScope.fullData.push({ 'date':$scope.date, 'purpose': $scope.purpose,'project':$scope.project, 'pm':$scope.pm, 'rate':$scope.rate, 'name' : $rootScope.user, 'status' : 1, 'reimburse' : '', 'invoice' : $scope.invoice, 'note_array' : [{"note" :""}]});
                 }
             }
             $('.shadow-div').removeClass('display_block');

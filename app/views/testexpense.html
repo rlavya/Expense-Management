@@ -24,8 +24,9 @@
                     <td ui-sref="/details_page">{{ data.pm }}</td>
                     <td ui-sref="/details_page">{{ data.rate }}</td>
                     <!-- <td>{{ data.invoice }}</td> -->
-                    <td style="cursor:pointer;" ng-click="reimburse('amount_reimburse')" ng-model="amount_reimburse">{{amount_reimburse}}
-    				</td>
+                    <!-- <td style="cursor:pointer;" ng-click="reimburse('amount_reimburse')" ng-model="amount_reimburse">{{amount_reimburse}}
+    				</td> -->
+                    <td style="cursor:pointer;" ng-model="amount_reimburse" ng-click="reimburse_amount(data)">{{ data.reimburse }}</td>
     			</tr>
         	</tbody>
             </table>

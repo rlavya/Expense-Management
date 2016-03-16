@@ -365,10 +365,16 @@ header p{
     float: right;
 }
 .notes_container{
-    max-height: 80px;
+    max-height: 65px;
     overflow: auto;
-    margin-bottom: 150px;
+    margin-bottom: 50px;
     border: 1px solid #eee;
     border-radius: 5px;
     padding: 10px;
+}
+.notes_container ul li {
+    padding: 10px;
+}
+.notes_container ul li:not(:last-child){
+    border-bottom: 1px solid rgba(125, 125, 125, 0.2);
 }
