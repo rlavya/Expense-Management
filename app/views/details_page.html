@@ -44,7 +44,7 @@
 		<label for="">History: </label>
 		<section class="notes_container" >
 			<ul ng-repeat="notes in singleData.note_array">
-				<li ng-show = " {{notes.note}} != 0 ">{{ notes.note }}</li>
+				<li ng-show = " '{{notes.note}}' != '0' ">{{ notes.note }}</li>
 			</ul>			
 		</section>
 	</div>
