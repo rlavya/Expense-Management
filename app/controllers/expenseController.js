@@ -4,6 +4,7 @@ expenseManagementApp.controller('expenseController', function($scope, $state, $h
     $rootScope.user = localStorage.getItem("name");
     $rootScope.user_type = localStorage.getItem("user_type");
     $scope.checked = true;
+    $scope.detail_edit_save = false;
      $scope.popup = function() {
         $('.overlay').addClass('display_block');
         $scope.notePopup = $scope.notePopup ? false : true;   
@@ -33,6 +34,7 @@ expenseManagementApp.controller('expenseController', function($scope, $state, $h
         }
     }
     $scope.edit_click = function() {
+        $scope.detail_edit_save = true;
         $( "#date_detail" ).datepicker({ dateFormat: 'dd-mm-yy' });
         $scope.checked = false;
     }

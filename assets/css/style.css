@@ -144,7 +144,7 @@ table.head tr th {
 }
 #expensetable{
     padding: 4px 8% 0 8%;
-    margin-bottom: 100px;
+    margin-bottom: 150px;
 }
 .btn_add {
     padding: 10px;
@@ -318,7 +318,7 @@ header p{
     display: inline-block;
     float: left;
 }
-.details_page_header{
+.details_page_header {
     margin-left: 20px;
     overflow: auto;
 }
@@ -329,7 +329,10 @@ header p{
     padding: 8px;
     margin-top: 10px;
 }
-#edit_button{
+#edit_button, #save_button {
+    width: 70px;
+    color: #CB3334;
+    border-radius: 40%;
     margin-right: 20px;
     float: right;
 }
@@ -365,6 +368,8 @@ header p{
     min-width: 35%;
 }
 #note_button{
+    color: #CB3334;
+    border-radius: 40%;
     margin-right: 0px;
     float: right;
 }
@@ -379,6 +384,16 @@ header p{
 
 .notes_container ul li:not(:last-child){
     border-bottom: 1px solid rgba(125, 125, 125, 0.2);
+}
+button:focus{
+    outline: none;
+}
+.save_btn{
+    width: 70px;
+    color: #CB3334;
+    border-radius: 40%;
+    margin-right: 20px;
+    float: right;
 }
 @media only screen and (max-width: 700px) {
     #details_page_inner{
