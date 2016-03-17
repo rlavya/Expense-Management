@@ -301,7 +301,10 @@ header p{
 #details_page_inner{
     padding: 20px;
     margin: auto;
-    width:60%;
+    width: 50%;
+    display: inline-block;
+    position: relative;
+    float: left;
 }
 #details_page_inner label{
     width: 130px;
@@ -357,24 +360,33 @@ header p{
     width: 210px;
 }
 .history_wrap{
-    margin-left: 40px;
-    margin-right: 40px;
+    display: inline-block;
+    float: left;
+    min-width: 35%;
 }
 #note_button{
     margin-right: 0px;
     float: right;
 }
 .notes_container{
-    max-height: 65px;
+    max-height: 250px;
     overflow: auto;
     margin-bottom: 50px;
     border: 1px solid #eee;
     border-radius: 5px;
     padding: 10px;
 }
-.notes_container ul li {
-    padding: 10px;
-}
+
 .notes_container ul li:not(:last-child){
     border-bottom: 1px solid rgba(125, 125, 125, 0.2);
+}
+@media only screen and (max-width: 700px) {
+    #details_page_inner{
+        width: 100%;
+    }
+    .history_wrap{
+        margin-left: 40px;
+        margin-right: 40px;
+        width: 60%;
+    }
 }

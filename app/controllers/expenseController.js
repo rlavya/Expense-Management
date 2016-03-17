@@ -21,6 +21,7 @@ expenseManagementApp.controller('expenseController', function($scope, $state, $h
         $rootScope.fullData[$rootScope.a].note_array.push({ 'note':$scope.note_model});
         $rootScope.singleData = $rootScope.fullData[$rootScope.a];
         $scope.popupClose();
+        $('#note').val('');
     }
     $scope.submit_detailpage = function() {
         $scope.checked = true;

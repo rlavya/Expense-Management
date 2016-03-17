@@ -1,11 +1,13 @@
+
 	<div class="details_page_header">
-		<h4 style="display:inline-block;">User Name:</h4>
+		<h4 style="display:inline-block;">Submitted by:</h4>
 		<p id="user_name"> {{singleData.name}}</p>
 		<button id="edit_button" ng-click="edit_click()">Edit</button>
-		<button id="note_button" ng-model="noteHistory" ng-click="popup()">Note</button>
+		<button id="note_button" ng-model="noteHistory" ng-click="popup()">Add Note</button>
 		<add-note ng-hide="notePopup"></add-note>
 	</div>
-	<div id="details_page_inner">	
+	<div style="display:block">
+	<div id="details_page_inner" style="display:inline-block">	
 		<div>
 			<label for="">Date: </label>
 			<input type="text" ng-disabled="checked" ng-value="{{ 'singleData.date' }}" ng-model="singleData.date" id="date_detail">
@@ -40,7 +42,7 @@
 			<button ui-sref="/approverexpense" ng-show="$root.user_type == 'approver'">Cancel</button>
 		</div>
 	</div>
-	<div class="history_wrap">
+	<div class="history_wrap" style="display:inline-block">
 		<label for="">History: </label>
 		<section class="notes_container" >
 			<ul ng-repeat="notes in singleData.note_array">
@@ -48,3 +50,4 @@
 			</ul>			
 		</section>
 	</div>
+</div>
