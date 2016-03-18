@@ -8,7 +8,7 @@
                         <th>Name</th>
                         <th>Reason</th>
                         <th>Amount(in Rs)</th>
-                        <!-- <th>Invoice</th> -->
+                        <th>Current Status</th>
                         <th>Approve</th>
                     </tr>
                 </thead>
@@ -18,16 +18,21 @@
                     <td ui-sref="/details_page">{{ data.name }}</td>
                     <td ui-sref="/details_page">{{ data.purpose }}</td>
                     <td ui-sref="/details_page">{{ data.rate }}</td>
+                    <td ui-sref="/details_page">
+                        <p ng-show = "data.status == 1">Approved</p>
+                        <p ng-show = "data.status == 0">Denied</p>
+                        <p ng-show = "data.status == 2">More Details</p>
+                    </td>
                     <td>
-                        <div ng-show="indexArray[$index] != true">
+                        <div>
                             <select ng-model="approve.repeatSelect[$index]">
                                 <option ng-repeat="approver_status in approve"> {{approver_status.val}} </option>
                             </select>
-                            <button ng-click="approve_check(data, $index)">Confirm</button>
+                            <button class="confirm_btn" ng-click="approve_check(data, $index)">Confirm</button>
                         </div>
-                        <div ng-show="indexArray[$index] == true">
+                        <!-- <div ng-show="indexArray[$index] == true">
                             {{approve.repeatSelect[$index]}}
-                        </div>   
+                        </div> -->   
                     </td>
                 </tr>
             </tbody>

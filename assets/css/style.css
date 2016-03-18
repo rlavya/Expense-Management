@@ -395,6 +395,9 @@ button:focus{
     margin-right: 20px;
     float: right;
 }
+.confirm_btn{
+    margin: 10px 0px;
+}
 @media only screen and (max-width: 700px) {
     #details_page_inner{
         width: 100%;

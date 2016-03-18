@@ -14,8 +14,12 @@ expenseManagementApp.controller('approveExpenseController', function($scope, $st
 			$rootScope.fullData[$rootScope.approveindex].status = 1;
 			$scope.status_approver = true;
 		}
-		else{
+		else if($scope.approve.repeatSelect[index] == ' Deny '){
 			$rootScope.fullData[$rootScope.approveindex].status = 0;
+			$scope.status_approver = true;	
+		}
+		else {
+			$rootScope.fullData[$rootScope.approveindex].status = 2;
 			$scope.status_approver = true;	
 		}
 		$scope.indexArray[index] = true;
