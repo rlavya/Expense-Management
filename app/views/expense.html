@@ -13,13 +13,11 @@
 					<th>Purpose</th>
 					<th>Project</th>
 					<th>Approver</th>
-					<th>Account (in Rs)</th>
-					<th>Invoice</th>
-					<!-- <th>Preview</th> -->
+					<th>Amount (in Rs)</th>
 				</tr>
 			</thead>
 			<tbody>
-	            <tr ng-repeat =  "emp in fullData | filter: { name : $root.user}">
+	            <tr ng-repeat =  "emp in fullData | filter: { name : $root.user}" ng-click="test(emp)" ui-sref="/details_page">
 					<td>
 						 {{emp.date | date : 'dd-mm-yyyy'}}
 				 	</td>
@@ -35,15 +33,6 @@
 					<td>
 						 {{ emp.rate }}
 					</td>
-					<td>
-						<input type='file' class="invoice" style="width: 92px; margin: auto;" onchange="angular.element(this).scope().readURL(this, angular.element(this).scope().$index)"/>
-					</td>
-					<!-- <td>
-						<a class="preview" ng-href="{{emp.invoice}} || 0" >hi</a>
-					</td> -->
-					<!-- <td>
-						{{emp.invoice}}
-					</td> -->
 				</tr>
 			</tbody>
 	    	</table>

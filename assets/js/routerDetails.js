@@ -21,5 +21,10 @@ expenseManagementApp.config(function($stateProvider, $urlRouterProvider){
         templateUrl: 'app/views/approveExpense.html',
         controller : 'approveExpenseController',
     })
+    .state('/details_page', {
+        url: "/details_page",
+        templateUrl: 'app/views/details_page.html',
+        controller : 'expenseController',
+    })
     // $locationProvider.html5Mode(true);
 });
