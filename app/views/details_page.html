@@ -40,16 +40,18 @@
 			<!-- <button ng-click="submit_detailpage()" ui-sref="/expense" ng-show="$root.user_type == 'user'">Submit</button>
 			<button ng-click="submit_detailpage()" ui-sref="/testexpense" ng-show="$root.user_type == 'admin'">Submit</button>
 			<button ng-click="submit_detailpage()" ui-sref="/approverexpense" ng-show="$root.user_type == 'approver'">Submit</button> -->
-			<button ui-sref="/expense" ng-show="$root.user_type == 'user'">Cancel</button>
-			<button ui-sref="/testexpense" ng-show="$root.user_type == 'admin'">Cancel</button>
-			<button ui-sref="/approverexpense" ng-show="$root.user_type == 'approver'">Cancel</button>
+			<button class="cancel_btn" ui-sref="/expense" ng-show="$root.user_type == 'user'">Cancel</button>
+			<button class="cancel_btn" ui-sref="/testexpense" ng-show="$root.user_type == 'admin'">Cancel</button>
+			<button class="cancel_btn" ui-sref="/approverexpense" ng-show="$root.user_type == 'approver'">Cancel</button>
 		</div>
 	</div>
 	<div class="history_wrap" style="display:inline-block">
 		<label for="">History: </label>
 		<section class="notes_container" >
 			<ul ng-repeat="notes in singleData.note_array">
-				<li ng-show = " '{{notes.note}}' != '0' ">{{ notes.note }}</li>
+				<li ng-show = " '{{notes.note}}' != '0' ">{{ notes.note }}
+					<p class="user_type" >{{ notes.user }}</p>
+				</li>
 			</ul>			
 		</section>
 	</div>

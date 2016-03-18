@@ -19,7 +19,7 @@ expenseManagementApp.controller('expenseController', function($scope, $state, $h
     }
     $scope.submitNote = function() {
         $scope.note_model = $('#note').val();
-        $rootScope.fullData[$rootScope.a].note_array.push({ 'note':$scope.note_model});
+        $rootScope.fullData[$rootScope.a].note_array.push({ 'note':$scope.note_model, 'user':$rootScope.user});
         $rootScope.singleData = $rootScope.fullData[$rootScope.a];
         $scope.popupClose();
         $('#note').val('');
