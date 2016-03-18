@@ -38,10 +38,14 @@ expenseManagementApp.controller('loginController', function($scope, $location, $
                             }
                         };
                     };
+                    $rootScope.user = 'admin';
+                    localStorage.setItem("name", "admin");
                     localStorage.setItem("user_type", "admin");
                     $state.go('/testexpense');
                 }
                 else if ($scope.email == "nishin@qburst.com" && $scope.password == "nishin") {
+                    $rootScope.user = 'nishin';
+                    localStorage.setItem("name", "nishin");
                     localStorage.setItem("user_type", "approver");
                     $state.go('/approverexpense');
                 }

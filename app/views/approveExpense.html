@@ -7,7 +7,7 @@
                         <th>Date</th>
                         <th>Name</th>
                         <th>Reason</th>
-                        <th>Amount(in Rs)</th>
+                        <th>Amount (in Rs)</th>
                         <th>Current Status</th>
                         <th>Approve</th>
                     </tr>
@@ -19,9 +19,9 @@
                     <td ui-sref="/details_page">{{ data.purpose }}</td>
                     <td ui-sref="/details_page">{{ data.rate }}</td>
                     <td ui-sref="/details_page">
-                        <p ng-show = "data.status == 1">Approved</p>
-                        <p ng-show = "data.status == 0">Denied</p>
-                        <p ng-show = "data.status == 2">More Details</p>
+                        <p class="status" ng-show = "data.status == 1">Approved</p>
+                        <p class="status" ng-show = "data.status == 0">Denied</p>
+                        <p class="status" ng-show = "data.status == 2">More Details</p>
                     </td>
                     <td>
                         <div>
