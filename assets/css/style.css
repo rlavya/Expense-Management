@@ -300,11 +300,13 @@ header p{
 }
 #details_page_inner{
     padding: 20px;
-    margin: auto;
-    width: 50%;
+    margin: 0px 100px;
+    width: 40%;
     display: inline-block;
     position: relative;
     float: left;
+    border: 1px solid #e3e3e3;
+    border-radius: 10px;
 }
 #details_page_inner label{
     width: 130px;
@@ -319,7 +321,7 @@ header p{
     float: left;
 }
 .details_page_header {
-    margin-left: 20px;
+    margin: 0px 80px;
     overflow: auto;
 }
 .details_page_header p{
@@ -358,7 +360,7 @@ header p{
     text-align: center;
     width: 100%;
     padding-top: 20px;
-    padding-right: 40%;
+    /*padding-right: 40%;*/
 }
 .button_style button{
     margin: 10px;
@@ -386,7 +388,7 @@ header p{
     max-height: 250px;
     overflow: auto;
     margin-bottom: 50px;
-    border: 1px solid #eee;
+    border: 1px solid #e3e3e3;
     border-radius: 5px;
     padding: 10px;
 }
@@ -408,6 +410,12 @@ button:focus{
     border: none;
     padding: 8px;
     margin: 20px;
+}
+#details_page_inner input, #details_page_inner select{
+    width: 40%;
+}
+#details_page_inner label{
+    width: 30%;
 }
 @media only screen and (max-width: 700px) {
     #details_page_inner{
