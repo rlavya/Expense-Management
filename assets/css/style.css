@@ -329,12 +329,17 @@ header p{
     padding: 8px;
     margin-top: 10px;
 }
-#edit_button, #save_button {
+#edit_button {
     width: 70px;
-    color: #CB3334;
-    border-radius: 40%;
-    margin-right: 20px;
+    background: #CB3334;
+    border-radius: 5px;
+    margin-right: 0px;
     float: right;
+    color: #fff;
+    outline: none;
+    border: none;
+    padding: 8px;
+    margin: 20px;
 }
 .invoice{
     display: inline-block!important;
@@ -368,10 +373,14 @@ header p{
     min-width: 35%;
 }
 #note_button{
-    color: #CB3334;
-    border-radius: 40%;
+    background: #CB3334;
+    border-radius: 5px;
     margin-right: 0px;
     float: right;
+    color: #fff;
+    outline: none;
+    border: none;
+    padding: 8px;
 }
 .notes_container{
     max-height: 250px;
@@ -390,10 +399,15 @@ button:focus{
 }
 .save_btn{
     width: 70px;
-    color: #CB3334;
-    border-radius: 40%;
-    margin-right: 20px;
+    background: #CB3334;
+    border-radius: 5px;
+    margin-right: 0px;
     float: right;
+    color: #fff;
+    outline: none;
+    border: none;
+    padding: 8px;
+    margin: 20px;
 }
 @media only screen and (max-width: 700px) {
     #details_page_inner{
