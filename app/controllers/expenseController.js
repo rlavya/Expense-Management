@@ -51,6 +51,15 @@ expenseManagementApp.controller('expenseController', function($scope, $state, $h
     $scope.submitAdd = function() {
         $scope.invoice = 'No file chosen';
         $scope.date = $('#datepicker').val();
+        if ($scope.currency == '$') {
+            $scope.rate = Math.round($scope.rate * 66.41 * 100) / 100;
+        }
+        else if ($scope.currency == '£') {
+            $scope.rate = Math.round($scope.rate * 95.91 * 100) / 100;
+        }
+        else{
+            $scope.rate = $scope.rate * 1;
+        }
         if ($scope.date == "" || $scope.purpose ==" " || $scope.pm == "" || $scope.rate == "") {
             $('.add_error').show();
             $('.add_error').html('Enter all details..');
@@ -72,6 +81,7 @@ expenseManagementApp.controller('expenseController', function($scope, $state, $h
             $('.shadow-div').removeClass('display_block');
             $scope.showAddExpense = $scope.showAddExpense ? false : true;
         }
+        console.log($scope.currency);
     }
     $scope.hideAdd = function() {
         $('.shadow-div').removeClass('display_block');
