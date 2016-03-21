@@ -417,9 +417,6 @@ button:focus{
 #details_page_inner label{
     width: 30%;
 }
-.confirm_btn{
-    margin: 10px 0px;
-}
 .cancel_btn{
     width: 70px;
     background: #CB3334;
@@ -443,8 +440,9 @@ button:focus{
     font-size: 12px;
     font-style: italic;
     color: #696969;
-    padding-top: 5px;
+    padding-top: 3px;
     margin: 0px 20px;
+    float: right;
 }
 .single_note{
     display: inline-block;
