@@ -300,7 +300,7 @@ header p{
 }
 #details_page_inner{
     padding: 20px;
-    margin: 0px 100px 100px 0px;
+    margin: 0px 100px 100px 100px;
     width: 40%;
     display: inline-block;
     position: relative;
