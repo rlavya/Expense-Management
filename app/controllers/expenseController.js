@@ -94,12 +94,14 @@ expenseManagementApp.controller('expenseController', function($scope, $state, $h
     $scope.readURL = function( element, currentObj){
         if (element.files && element.files[0]) {
             var reader = new FileReader();
-            
+            var preview = document.querySelector('.img');
             reader.onload = function (e) {
                 $scope.invoice = e.target.result;
                     // $timeout(function(){
                         $rootScope.$apply(function() {
                             currentObj.invoice = $scope.invoice;
+                            preview.src = reader.result;
+                            debugger
                         });
                 // });
             }

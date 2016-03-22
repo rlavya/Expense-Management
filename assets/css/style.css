@@ -300,7 +300,7 @@ header p{
 }
 #details_page_inner{
     padding: 20px;
-    margin: 0px 100px;
+    margin: 0px 100px 100px 0px;
     width: 40%;
     display: inline-block;
     position: relative;
@@ -359,8 +359,6 @@ header p{
 #details_page_inner .button_style {
     text-align: center;
     width: 100%;
-    padding-top: 20px;
-    /*padding-right: 40%;*/
 }
 .button_style button{
     margin: 10px;
@@ -451,6 +449,14 @@ button:focus{
     text-overflow: ellipsis;
     vertical-align: middle;
     margin-bottom: 0px;
+}
+.img{
+    height: 150px;
+    width: 150px;
+    margin-top: 10px;
+}
+.upload_wrap{
+    text-align: center;
 }
 @media only screen and (max-width: 700px) {
     #details_page_inner{
