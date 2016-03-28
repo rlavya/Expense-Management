@@ -56,13 +56,12 @@ expenseManagementApp.controller('expenseController', function($scope, $state, $h
         $scope.invoice = 'No file chosen';
         $scope.date = $('#datepicker').val();
         if ($scope.currency == '$') {
-            $scope.rate = Math.round($scope.rate * 66.41 * 100) / 100;
+            $scope.conversionFactor = 66.41;
+            $scope.rate = Math.round($scope.rate * $scope.conversionFactor * 100) / 100;
         }
         else if ($scope.currency == '£') {
-            $scope.rate = Math.round($scope.rate * 95.91 * 100) / 100;
-        }
-        else{
-            $scope.rate = $scope.rate * 1;
+            $scope.conversionFactor = 95.91;
+            $scope.rate = Math.round($scope.rate * $scope.conversionFactor * 100) / 100;
         }
         if ($scope.date == "" || $scope.purpose ==" " || $scope.pm == "" || $scope.rate == "") {
             $('.add_error').show();
