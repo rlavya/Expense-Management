@@ -19,7 +19,11 @@ expenseManagementApp.controller('expenseController', function($scope, $state, $h
     }
     $scope.submitNote = function() {
         $scope.note_model = $('#note').val();
-        $rootScope.fullData[$rootScope.a].note_array.push({ 'note':$scope.note_model, 'user':$rootScope.user});
+        $scope.d = new Date();
+        $scope.date_time = $scope.d.toDateString() + ' ' + $scope.d.toTimeString().split(" ")[0];
+        console.log($scope.date_time);
+        debugger
+        $rootScope.fullData[$rootScope.a].note_array.push({ 'note':$scope.note_model, 'user':$rootScope.user, 'time': $scope.date_time });
         $rootScope.singleData = $rootScope.fullData[$rootScope.a];
         $scope.popupClose();
         $('#note').val('');
@@ -51,6 +55,14 @@ expenseManagementApp.controller('expenseController', function($scope, $state, $h
     $scope.submitAdd = function() {
         $scope.invoice = 'No file chosen';
         $scope.date = $('#datepicker').val();
+        if ($scope.currency == '$') {
+            $scope.conversionFactor = 66.41;
+            $scope.rate = Math.round($scope.rate * $scope.conversionFactor * 100) / 100;
+        }
+        else if ($scope.currency == '£') {
+            $scope.conversionFactor = 95.91;
+            $scope.rate = Math.round($scope.rate * $scope.conversionFactor * 100) / 100;
+        }
         if ($scope.date == "" || $scope.purpose ==" " || $scope.pm == "" || $scope.rate == "") {
             $('.add_error').show();
             $('.add_error').html('Enter all details..');
@@ -72,6 +84,7 @@ expenseManagementApp.controller('expenseController', function($scope, $state, $h
             $('.shadow-div').removeClass('display_block');
             $scope.showAddExpense = $scope.showAddExpense ? false : true;
         }
+        console.log($scope.currency);
     }
     $scope.hideAdd = function() {
         $('.shadow-div').removeClass('display_block');
@@ -80,12 +93,14 @@ expenseManagementApp.controller('expenseController', function($scope, $state, $h
     $scope.readURL = function( element, currentObj){
         if (element.files && element.files[0]) {
             var reader = new FileReader();
-            
+            var preview = document.querySelector('.img');
             reader.onload = function (e) {
                 $scope.invoice = e.target.result;
                     // $timeout(function(){
                         $rootScope.$apply(function() {
                             currentObj.invoice = $scope.invoice;
+                            preview.src = reader.result;
+                            debugger
                         });
                 // });
             }

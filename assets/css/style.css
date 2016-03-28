@@ -300,7 +300,7 @@ header p{
 }
 #details_page_inner{
     padding: 20px;
-    margin: 0px 100px;
+    margin: 0px 100px 100px 100px;
     width: 40%;
     display: inline-block;
     position: relative;
@@ -359,8 +359,6 @@ header p{
 #details_page_inner .button_style {
     text-align: center;
     width: 100%;
-    padding-top: 20px;
-    /*padding-right: 40%;*/
 }
 .button_style button{
     margin: 10px;
@@ -417,9 +415,6 @@ button:focus{
 #details_page_inner label{
     width: 30%;
 }
-.confirm_btn{
-    margin: 10px 0px;
-}
 .cancel_btn{
     width: 70px;
     background: #CB3334;
@@ -438,6 +433,30 @@ button:focus{
     display: inline-block;
     float: right;
     color: #CB3334;
+}
+.date_time {
+    font-size: 12px;
+    font-style: italic;
+    color: #696969;
+    padding-top: 3px;
+    margin: 0px 20px;
+    float: right;
+}
+.single_note{
+    display: inline-block;
+    max-width: 230px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    margin-bottom: 0px;
+}
+.img{
+    height: 150px;
+    width: 150px;
+    margin-top: 10px;
+}
+.upload_wrap{
+    text-align: center;
 }
 @media only screen and (max-width: 700px) {
     #details_page_inner{
