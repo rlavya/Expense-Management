@@ -53,7 +53,7 @@ expenseManagementApp.controller('expenseController', function($scope, $state, $h
         $scope.showAddExpense = $scope.showAddExpense ? false : true;
     }
     $scope.submitAdd = function() {
-        $scope.invoice = 'No file chosen';
+        $scope.invoice = '';
         $scope.date = $('#datepicker').val();
         if ($scope.currency == '$') {
             $scope.conversionFactor = 66.41;
@@ -99,7 +99,9 @@ expenseManagementApp.controller('expenseController', function($scope, $state, $h
                     // $timeout(function(){
                         $rootScope.$apply(function() {
                             currentObj.invoice = $scope.invoice;
-                            preview.src = reader.result;
+                            // preview.src = reader.result;
+                            $scope.url = reader.result;
+                            console.log($rootScope.a);
                             debugger
                         });
                 // });

@@ -11,7 +11,7 @@
                 "rate": 200,
                 "status": 1,
                 "total " : 0,
-                "invoice" : "No file chosen",
+                "invoice" : "",
                 "reimburse" : 0,
                 "note_array" :
                 [
@@ -30,7 +30,7 @@
                 "rate": 350,
                 "status": 0,
                 "total " : 0,
-                "invoice" : "No file chosen",
+                "invoice" : "",
                 "reimburse" : 0,
                 "note_array" : 
                 [
@@ -52,7 +52,7 @@
             "rate": 500,
             "status": 1,
             "total2 " : 0,
-            "invoice" : "No file chosen",
+            "invoice" : "",
             "reimburse" : 0,
             "note_array" : 
             [
@@ -71,7 +71,7 @@
             "rate": 250,
             "status": 1,
             "total2 " : 0,
-            "invoice" : "No file chosen",
+            "invoice" : "",
             "reimburse" : 0,
             "note_array" : 
             [

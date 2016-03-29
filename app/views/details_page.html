@@ -36,7 +36,7 @@
 			<input type='file' id="invoice_upload" ng-model="currentImage" class="invoice" onchange="angular.element(this).scope().readURL(this, angular.element(this).scope().singleData)" ng-disabled="checked"/>
 			<!-- <a class="view_invoice" ng-hide = "singleData.invoice == 'No file chosen'" ng-click="openURL(singleData)" >View</a> -->
 			<div class="upload_wrap">
-				<img class="img" src="" height="200" alt="Image preview...">
+				<img class="img" ng-src=" {{singleData.invoice}} " height="200" alt="Image preview...">
 			</div>
 		</div>
 		<div class="button_style">
@@ -48,7 +48,7 @@
 			<button class="cancel_btn" ui-sref="/approverexpense" ng-show="$root.user_type == 'approver'">Cancel</button>
 		</div>
 	</div>
-	<div class="history_wrap" style="display:inline-block">
+	<div class="history_wrap">
 		<label for="">History: </label>
 		<section class="notes_container" >
 			<ul ng-repeat="notes in singleData.note_array">

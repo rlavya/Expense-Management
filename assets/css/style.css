@@ -176,13 +176,19 @@ table.head tr th {
 .form_inner{
     width: 450px;
     height: 365px;
-    position: absolute;
-    left: 10%;
     top: 0%;
     z-index: 999;
-    background: #eee;
+    position: relative;
+    left: -50%;
     text-align: center;
-    margin: 10% 15% 15% 25%;
+    background: #eee;
+    padding: 15px;
+}
+.form_outer{
+    position: absolute;
+    left: 47%;
+    width: 400px;
+    z-index: 999;
 }
 a:hover, a:focus{
     color: #fff;
@@ -458,13 +464,19 @@ button:focus{
 .upload_wrap{
     text-align: center;
 }
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 768px) {
     #details_page_inner{
-        width: 100%;
+        width: 80%;
+        float: none;
+        margin: auto;
+        display: block!important;
     }
     .history_wrap{
-        margin-left: 40px;
-        margin-right: 40px;
         width: 60%;
+        float: none;
+        margin: auto;
+        margin-bottom: 120px;
+        margin-top: 20px;
+        display: block;
     }
 }
