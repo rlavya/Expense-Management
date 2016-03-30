@@ -479,4 +479,10 @@ button:focus{
         margin-top: 20px;
         display: block;
     }
+    .status_dropdown{
+        width: 50px;
+    }
+    .confirm_btn{
+        margin-top: 5px;
+    }
 }
