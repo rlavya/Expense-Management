@@ -25,10 +25,11 @@
                     </td>
                     <td>
                         <div>
-                            <select ng-model="approve.repeatSelect[$index]">
+                            <select ng-model="approve.repeatSelect[$index]" class="status_dropdown">
                                 <option ng-repeat="approver_status in approve"> {{approver_status.val}} </option>
                             </select>
-                            <button class="confirm_btn" ng-click="approve_check(data, $index)">Confirm</button>
+                            <!-- <button class="confirm_btn" ng-click="approve_check(data, $index)">Confirm</button> -->
+                            <img class="confirm_btn" ng-click="approve_check(data, $index)" src="assets/images/tick_icon.png" alt="">
                         </div>
                         <!-- <div ng-show="indexArray[$index] == true">
                             {{approve.repeatSelect[$index]}}

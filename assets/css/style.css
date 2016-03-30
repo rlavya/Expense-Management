@@ -176,13 +176,19 @@ table.head tr th {
 .form_inner{
     width: 450px;
     height: 365px;
-    position: absolute;
-    left: 10%;
     top: 0%;
     z-index: 999;
-    background: #eee;
+    position: relative;
+    left: -50%;
     text-align: center;
-    margin: 10% 15% 15% 25%;
+    background: #eee;
+    padding: 15px;
+}
+.form_outer{
+    position: absolute;
+    left: 47%;
+    width: 400px;
+    z-index: 999;
 }
 a:hover, a:focus{
     color: #fff;
@@ -300,7 +306,7 @@ header p{
 }
 #details_page_inner{
     padding: 20px;
-    margin: 0px 100px;
+    margin: 0px 100px 100px 100px;
     width: 40%;
     display: inline-block;
     position: relative;
@@ -359,8 +365,6 @@ header p{
 #details_page_inner .button_style {
     text-align: center;
     width: 100%;
-    padding-top: 20px;
-    /*padding-right: 40%;*/
 }
 .button_style button{
     margin: 10px;
@@ -417,9 +421,6 @@ button:focus{
 #details_page_inner label{
     width: 30%;
 }
-.confirm_btn{
-    margin: 10px 0px;
-}
 .cancel_btn{
     width: 70px;
     background: #CB3334;
@@ -439,13 +440,49 @@ button:focus{
     float: right;
     color: #CB3334;
 }
-@media only screen and (max-width: 700px) {
+.date_time {
+    font-size: 12px;
+    font-style: italic;
+    color: #696969;
+    padding-top: 3px;
+    margin: 0px 20px;
+    float: right;
+}
+.single_note{
+    display: inline-block;
+    max-width: 230px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    margin-bottom: 0px;
+}
+.img{
+    height: 150px;
+    width: 150px;
+    margin-top: 10px;
+}
+.upload_wrap{
+    text-align: center;
+}
+@media only screen and (max-width: 768px) {
     #details_page_inner{
-        width: 100%;
+        width: 80%;
+        float: none;
+        margin: auto;
+        display: block!important;
     }
     .history_wrap{
-        margin-left: 40px;
-        margin-right: 40px;
         width: 60%;
+        float: none;
+        margin: auto;
+        margin-bottom: 120px;
+        margin-top: 20px;
+        display: block;
+    }
+    .status_dropdown{
+        width: 50px;
+    }
+    .confirm_btn{
+        margin-top: 5px;
     }
 }
